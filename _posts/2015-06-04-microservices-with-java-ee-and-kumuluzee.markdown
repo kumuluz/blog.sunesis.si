@@ -518,11 +518,6 @@ Now let's implement the orders module. We'll create an order resource that will 
 </dependency>
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
-    <artifactId>kumuluzee-jpa</artifactId>
-    <version>${kumuluzee.version}</version>
-</dependency>
-<dependency>
-    <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-cdi</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
@@ -604,7 +599,7 @@ As you can see the microservice is exactly the same as any other Java EE app. As
 
 > NOTE: A microservice can and should contain multiple REST resources. To put it differently; it should contain as many REST resources as it needs to perform the functions it is designed to do.
 
-Alright now let's return to our catalogue model and finish our example
+Alright now let's return to our catalogue model and finish our example.
 
 ### Catalogue module
 
@@ -670,7 +665,7 @@ public class BooksResource {
 
 ## Putting it all together
 
-And we're done. We have just created two microservices that will run independently of each other, however they can still work together with the help of REST interfaces and of course share common resources like a database. We can now build and run them independently. Because we will be starting two HTTP servers we must use a different port for the other server. We can easily control this using the `PORT` environment variable.
+And we're done. We have just created two microservices that will run independently of each other. However they can still work together with the help of REST interfaces and of course share common resources like a database. We can now build and run them independently. Because we will be starting two HTTP servers we must use a different port for the other server. We can easily control this using the `PORT` environment variable.
 
 {% highlight bash %}
 $ PORT=3000 java -cp catalogue/target/classes:catalogue/target/dependency/* com.kumuluz.ee.EeApplication
@@ -684,7 +679,7 @@ We can now browse our microservices and see them in action on `http://localhost:
 
 # In conclusion
 
-As you can see the microservices we have written are basically normal Java EE applications. With KumuluzEE we are able to bridge the gap between them and the microservice architecture and focus solely on developing with what we already know but in a completely new way. It seamlessly sets everything up automatically so we don't have too, while still allowing a great deal of customisation to accommodate our needs. On top of that it makes it easy to run our microservices as any other Java applications and that opens a world of possible cloud configuration with almost any cloud provider out there that are simply not possible now.
+As you can see the microservices we have written are basically standard Java EE applications. With KumuluzEE we are able to bridge the gap between them and the microservice architecture and focus solely on developing with what we already know but in a completely new way. It seamlessly sets everything up automatically so we don't have too, while still allowing a great deal of customisation to accommodate our needs. On top of that it makes it easy to run our microservices as any other Java applications and that opens a world of possible cloud configuration with almost any cloud provider out there that are simply not possible now.
 
 In the next post we will be focusing on deploying our microservices into docker and various cloud environments.
 

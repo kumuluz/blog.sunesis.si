@@ -9,5 +9,7 @@ url: "https://blog.kumuluz.com" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
+excerpt_separator: "<!--more-->"
+
 # Build settings
 markdown: kramdown

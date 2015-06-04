@@ -20,7 +20,7 @@ layout: default
                 {{ author.name }}, {{ post.date | date: "%b %-d, %Y" }}
               </div>
               <div class="intro">
-                {{ post.content | split:"<!--more-->" | first }}
+                {{ post.excerpt }}
               </div>
               <a href="{{ post.url | prepend: site.baseurl }}" class="continue-reading">Continue reading this post</a>
             </div>

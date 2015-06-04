@@ -102,7 +102,7 @@ Many of these issues don't have a straightforward solution using the traditional
 
 So let's try the microservice approach and refactor our architecture to follow the microservice architectural pattern while continuing to use standard Java EE technologies. To achieve this, we are going to use KumuluzEE:
 
-![Microservice architecture](https://dl.dropboxusercontent.com/u/16277758/microservice.png)
+![Microservice architecture]({{ site.baseurl }}/assets/images/posts/microservices-with-java-ee-and-kumuluzee/microservice.png)
 
 We start by separating our concerns and split the catalogue and orders functionalities into two separately configured and deployed microservices. That way we have created microservices that are only concerned with their respected functionalities. We've also reduced the interference with one another and overall form a better modular and bug free application. Each one of them will connect directly to the database (later on we can add messaging services, caches, ...) and will communicate with each other through pre-defined REST interfaces. 
 

@@ -19,9 +19,9 @@ layout: default
                 <img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
                 {{ author.name }}, {{ post.date | date: "%b %-d, %Y" }}
               </div>
-              <p class="intro">
-                {{ post.excerpt }}
-              </p>
+              <div class="intro">
+                {{ post.content | split:"<!--more-->" | first }}
+              </div>
               <a href="{{ post.url | prepend: site.baseurl }}" class="continue-reading">Continue reading this post</a>
             </div>
           {% endfor %}

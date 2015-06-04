@@ -21,6 +21,8 @@ Instead of packing all microservices into a single archive (EAR/WAR), each micro
 - Makes it easier to adopt new technologies for parts of an application;
 - Makes it much easier to scale applications in PaaS and Docker-like environments.
 
+<!--more-->
+
 Microservice approach also has its drawbacks, particularly in the added complexity, related to development and particularly to the deployment. To deploy microservices on stand-alone containers requires several steps, such as configuring the containers, defining the dependencies, deploying the microservices, etc.
 
 # KumuluzEE

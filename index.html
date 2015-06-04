@@ -2,22 +2,71 @@
 layout: default
 ---
 
-<div class="home">
+<div id="blog">
+  <div id="posts">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9">
 
-  <h1 class="page-heading">Posts</h1>
+          {% for post in site.posts %}
+            {% assign author = site.data.authors[post.author] %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <div class="post">
+              <div class="title">
+                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              </div>
+              <div class="author">
+                <img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
+                {{ author.name }}, {{ post.date | date: "%b %-d, %Y" }}
+              </div>
+              <p class="intro">
+                {{ post.excerpt }}
+              </p>
+              <a href="{{ post.url | prepend: site.baseurl }}" class="continue-reading">Continue reading this post</a>
+            </div>
+          {% endfor %}
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+          <div class="pages">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 sidebar">
+          <!-- <div class="search">
+            <form>
+              <span class="icomoon-search"></span>
+              <input type="text" name="q" placeholder="Search on blog..." />
+            </form>
+          </div> -->
+          <div class="updates">
+            <strong>
+              Blog updates
+              <i class="fa fa-rss"></i>
+            </strong>
+            <p>
+              Never miss an update. 
+              Subscribe to our feed and get notified whenever we post something in the blog.
+            </p>
+          </div>
+          <div class="follow-tw">
+            <img src="images/twitterfollow.png" alt="follow-tw" />
+          </div>
+          <div class="best-hits">
+            <strong>Check out our best hits:</strong>
+            <a href="#">How to start a business</a>
+            <a href="#">How to sell online</a>
+            <a href="#">Climate change when needed</a>
+            <a href="#">Web development upstart</a>
+            <a href="#">Learn Rails in 30 days</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

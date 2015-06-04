@@ -130,7 +130,7 @@ We will be using Maven to create the application as that is our system of choice
 
 Our project structure will look like this:
 
-```
+~~~
 .
 +-- models
 |   +-- src
@@ -147,13 +147,13 @@ Our project structure will look like this:
 |   |   +-- test
 |   +-- pom.xml
 +-- pom.xml
-```
+~~~
 
 Again this is only to simplify the example. In a real project the `catalogue` and `orders` folders/projects would each be in a separate repository. We have also added a module that will hold our JPA entities as they will be shared with our two microservices. First lets create the top-most `pom.xml` that will only serve in this example to include our main modules. We will be using `acme.com` as our package name and group id throughout the examples.
 
 `FILE ./pom.xml`
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -166,32 +166,32 @@ Again this is only to simplify the example. In a real project the `catalogue` an
     <packaging>pom</packaging>
 
 </project>
-```
+{% endhighlight %}
 
 Now let's create our first microservice project. We will be using maven archetype generation.
 
 Run the following commands inside the project folder. This will generate the three projects we require.
 
-```bash
+{% highlight bash %}
 $ mvn -B archetype:generate \
     -DarchetypeGroupId=org.apache.maven.archetypes \
     -DgroupId=com.acme.books \
     -DartifactId=catalogue
-```
+{% endhighlight %}
 
-```bash
+{% highlight bash %}
 $ mvn -B archetype:generate \
     -DarchetypeGroupId=org.apache.maven.archetypes \
     -DgroupId=com.acme.books \
     -DartifactId=orders
-```
+{% endhighlight %}
 
-```bash
+{% highlight bash %}
 $ mvn -B archetype:generate \
     -DarchetypeGroupId=org.apache.maven.archetypes \
     -DgroupId=com.acme.books \
     -DartifactId=models
-```
+{% endhighlight %}
 
 ## Add KumuluzEE
 
@@ -203,35 +203,35 @@ All modules are versioned and released together which helps reduce cross version
 
 `FILE ./catalogue/pom.xml`
 
-```xml
+{% highlight xml %}
 <properties>
     <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
 </properties>
-```
+{% endhighlight %}
 
 First include the `core` module which includes the bootstrapping logic and configurations.
 
 `FILE ./catalogue/pom.xml`
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-core</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
 Now the core itself won't do much without something to run. At the very least we have to include an HTTP server that will process our applications requests and forward them to our desired Java EE components. Jetty is preferred as the servlet implementation for its high performance and small footprint. Support for different servers like Tomcat, Grizzly and Undertow is coming in a future version.
 
 `FILE ./catalogue/pom.xml`
 
-```xml
+{% highlight bash %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-servlet-jetty</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
 This is the bare minimum required to run a microservice with plain servlets and static files. Lets try it out! KumuluzEE will use a `webapp` folder at the root of your `resource` folder to look for files and configuration regarding it. This is the only difference to the standard Java EE file structure as the `webapp` folder has to be inside the `resource` folder not alongside it. 
 
@@ -239,7 +239,7 @@ We don't need to include a web.xml file, because like application servers Kumulu
 
 `FILE ./catalogue/src/main/resources/webapp/index.html`
 
-```HTML
+{% highlight html %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -250,7 +250,7 @@ We don't need to include a web.xml file, because like application servers Kumulu
     <p>Here we could display the book catalogue</p>
 </body>
 </html>
-```
+{% endhighlight %}
 
 And this is all you need to do. The `kumuluzee-core` package provides the class `com.kumuluz.ee.EeApplication` with a main method that will bootstrap your app. If you have your project opened in an IDE (IntelliJ, Eclipse, ..) you can now start the microservice creating a new run configuration, selecting `Java application` and enter the above class as the `Main class` atribute. If however you are looking to run it from the terminal (as will be the case on a server and various PaaS environments) then you run it directly from the class files in the target directory.
 
@@ -260,7 +260,7 @@ To do so you must include the `maven-dependency-plugin` to your `pom.xml` file w
 
 `FILE ./catalogue/pom.xml`
 
-```xml
+{% highlight xml %}
 <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-dependency-plugin</artifactId>
@@ -275,13 +275,13 @@ To do so you must include the `maven-dependency-plugin` to your `pom.xml` file w
         </execution>
     </executions>
 </plugin>
-```
+{% endhighlight %}
 
 Run `maven package` and then you can start your microservice using the following command:
 
-```bash
+{% highlight bash %}
 $ java -cp target/classes:target/dependency/* com.kumuluz.ee.EeApplication
-```
+{% endhighlight %}
 
 Go to http://localhost:8080/ in your browser and you should see the HTML file that we added.
 
@@ -293,7 +293,7 @@ Let's add the remaining required dependencies. We will need JAX-RS for the REST 
 
 `FILE ./catalogue/pom.xml`
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-jax-rs</artifactId>
@@ -309,33 +309,33 @@ Let's add the remaining required dependencies. We will need JAX-RS for the REST 
     <artifactId>kumuluzee-cdi</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
 Again if we wanted additional components, as of this writing we can use these additional ones.
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-jsp</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-bean-validation</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-json-p</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
-```
+{% endhighlight %}
 
 ### JPA module
 
@@ -343,7 +343,7 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
 
 `FILE ./models/pom.xml`
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-jpa</artifactId>
@@ -354,10 +354,10 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
     <artifactId>postgresql</artifactId>
     <version>9.4-1201-jdbc41</version>
 </dependency>
-```
+{% endhighlight %}
 `FILE ./models/src/main/resources/META-INF/persistence.xml`
 
-```xml
+{% highlight xml %}
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
@@ -383,13 +383,13 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
 
     </persistence-unit>
 </persistence>
-```
+{% endhighlight %}
 
 The values defined in the xml for the url, username and password can be overwritten by setting the `DATABASE_URL`, `DATABASE_USER` and `DATABASE_PASS` environment variables respectively.
 
 `FILE ./models/src/main/java/com/acme/books/models/Book.java`
 
-```java
+{% highlight java %}
 @Entity
 @NamedQuery(name="Book.findAll", query="SELECT b FROM Book b")
 public class Book {
@@ -439,11 +439,11 @@ public class Book {
         this.author = author;
     }
 }
-```
+{% endhighlight %}
 
 `FILE ./models/src/main/java/com/acme/books/models/Order.java`
 
-```java
+{% highlight java %}
 @Entity
 @NamedQuery(name="Order.findAll", query="SELECT o FROM Order o")
 public class Order {
@@ -483,7 +483,7 @@ public class Order {
         this.book = book;
     }
 }
-```
+{% endhighlight %}
 
 ### Orders module
 
@@ -491,7 +491,7 @@ Now let's implement the orders module. We'll create an order resource that will 
 
 `FILE ./orders/pom.xml`
 
-```xml
+{% highlight xml %}
 <dependency>
     <groupId>com.acme.books</groupId>
     <artifactId>books.models</artifactId>
@@ -539,24 +539,24 @@ Now let's implement the orders module. We'll create an order resource that will 
         </execution>
     </executions>
 </plugin>
-```
+{% endhighlight %}
 
 The application.
 
 `FILE ./orders/src/main/java/com/acme/books/OrdersApplication.java`
 
-```java
+{% highlight java %}
 @ApplicationPath("/")
 public class OrdersApplication extends javax.ws.rs.core.Application {
 
 }
-```
+{% endhighlight %}
 
 And the resource.
 
 `FILE ./orders/src/main/java/com/acme/books/OrdersResource.java`
 
-```java
+{% highlight java %}
 @Path("/orders")
 @Produces(ContentType.APPLICATION_JSON)
 @Consumes(ContentType.APPLICATION_JSON)
@@ -594,7 +594,7 @@ public class OrdersResource {
         return Response.created().entity(o).build();
     }
 }
-```
+{% endhighlight %}
 
 As you can see the microservice is exactly the same as any other Java EE app. As of right now we have to manually manage transactions as the JTA module is not yet available. We can do so by either creating a simple CDI interceptor that will start and commit them or manually do it in every method. Either way, sometimes a more transparency may be a good thing.
 
@@ -608,18 +608,18 @@ We have already added the required dependencies when we were getting familiar wi
 
 `FILE ./catalogue/src/main/java/com/acme/books/BooksApplication.java`
 
-```java
+{% highlight java %}
 @ApplicationPath("/")
 public class BooksApplication extends javax.ws.rs.core.Application {
 
 }
-```
+{% endhighlight %}
 
 And the resource.
 
 `FILE ./catalogue/src/main/java/com/acme/books/BooksResource.java`
 
-```java
+{% highlight java %}
 @Path("/orders")
 @Produces(ContentType.APPLICATION_JSON)
 @Consumes(ContentType.APPLICATION_JSON)
@@ -662,19 +662,19 @@ public class BooksResource {
         return Response.created().entity(b).build();
     }
 }
-```
+{% endhighlight %}
 
 ## Putting it all together
 
 And we're done. We have just created two microservices that will run independently of each other, however they can still work together with the help of REST interfaces and of course share common resources like a database. We can now build and run them independently. Because we will be starting two HTTP servers we must use a different port for the other server. We can easily control this using the `PORT` environment variable.
 
-```bash
+{% highlight bash %}
 $ PORT=3000 java -cp catalogue/target/classes:catalogue/target/dependency/* com.kumuluz.ee.EeApplication
-```
+{% endhighlight %}
 
-```bash
+{% highlight bash %}
 $ PORT=3001 java -cp orders/target/classes:orders/target/dependency/* com.kumuluz.ee.EeApplication
-```
+{% endhighlight %}
 
 We can now browse our microservices and see them in action on `http://localhost:3000` and `http://localhost:3001` respectively.
 

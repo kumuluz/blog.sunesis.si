@@ -18,6 +18,15 @@ layout: default
               <div class="author">
                 <img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
                 {{ author.name }}, {{ post.date | date: "%b %-d, %Y" }}
+
+                {% if post.categories %}
+                  <span class="categories">
+                    <i class="fa fa-folder"></i>
+                    {% for category in post.categories %}
+                      {{ category | capitalize }}
+                    {% endfor %}
+                  </span>
+                {% endif %}
               </div>
               <div class="intro">
                 {{ post.excerpt }}

@@ -82,7 +82,7 @@ We would have several beans deployed that would handle all the business logic, t
 
 At first this may seem as a perfectly good design. However we can quickly start to identify its shortcomings. When our application starts to grow and we get more and more traffic, we need to start scaling out. Initially we can scale up, however that can only get us so far. Sooner rather than later we need to start distributing our requests. The way we do that is to set up, configure and maintain a cluster of application servers which is usually - let's face it - a not so pleasant experience. And since virtually no cloud provider offers support for such configurations we are on our own. Even if we set it all up, we still have no simple way to provide true elasticity to our application.
 
-Letâ€™s dig into some more problems:
+Let's dig into some more problems:
 
 - Soon we notice that the catalogue part of the application gets way more traffic than the orders part. So we would like to scale only the part that handles the book catalogue. Otherwise we would waste server resources.
 
@@ -690,10 +690,6 @@ In the next post we will be focusing on deploying our microservices into docker 
 
 # Read on
 
-- Get familiar with [KumuluzEE](KumuluzEE)
+- Get familiar with [KumuluzEE](https://ee.kumuluz.com)
 - View the code on [GitHub](https://github.com/TFaga/kumuluzee-example)
 - Discover [microservices](http://microservices.io)
-
-[KumuluzEE]:   https://ee.kumuluz.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help

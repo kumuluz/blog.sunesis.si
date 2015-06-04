@@ -76,7 +76,7 @@ Lets use KumuluzEE to see this in action. Supposed we would like to create an on
 
 With traditional application servers we would normally create a monolithic EAR package that would include our business logic and several WAR packages. Our architecture would look something like this:
 
-![Monolithic architecture]({{ site.baseurl }}/assets/images/posts/2015-06-04-microservices-with-java-ee-and-kumuluzee/monolithic.png)
+![Monolithic architecture]({{ site.baseurl }}/assets/images/posts/microservices-with-java-ee-and-kumuluzee/monolithic.png)
 
 We would have several beans deployed that would handle all the business logic, those would use a JPA module that would handle the connection to an underlying database as well as act as our ORM. We would have a web layer, which would consist of REST interfaces. These would call our business logic. And a static HTML5 JavaScript web application, which would call our REST interfaces. All the components would be packaged together into a single EAR and deployed to the application server.
 
@@ -600,7 +600,7 @@ public class OrdersResource {
 }
 {% endhighlight %}
 
-As you can see the microservice is exactly the same as any other Java EE app. As of right now we have to manually manage transactions as the JTA module is not yet available. We can do so by either creating a simple CDI interceptor that will start and commit them or manually do it in every method. Either way, sometimes a more transparency may be a good thing.
+As you can see the microservice is exactly the same as any other Java EE app. As of right now we have to manually manage transactions as the JTA module is not yet available. We can do so by either creating a simple CDI interceptor that will start and commit them or manually do it in every method. Either way, sometimes a bit more transparency may be a good thing.
 
 > NOTE: A microservice can and should contain multiple REST resources. To put it differently; it should contain as many REST resources as it needs to perform the functions it is designed to do.
 

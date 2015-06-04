@@ -41,24 +41,27 @@ layout: default
           <div class="updates">
             <strong>
               Blog updates
-              <i class="fa fa-rss"></i>
             </strong>
             <p>
               Never miss an update. 
-              Subscribe to our feed and get notified whenever we post something in the blog.
+              Subscribe to our feed or follow us on social media and get notified whenever we post something in the blog.
             </p>
           </div>
+
           <div class="follow-tw">
-            <img src="images/twitterfollow.png" alt="follow-tw" />
+            <a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+              <i class="fa fa-rss"></i>
+              Subscribe
+            </a>
           </div>
-          <div class="best-hits">
+          <!-- <div class="best-hits">
             <strong>Check out our best hits:</strong>
             <a href="#">How to start a business</a>
             <a href="#">How to sell online</a>
             <a href="#">Climate change when needed</a>
             <a href="#">Web development upstart</a>
             <a href="#">Learn Rails in 30 days</a>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

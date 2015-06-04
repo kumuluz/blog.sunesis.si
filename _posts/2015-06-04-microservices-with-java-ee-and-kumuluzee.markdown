@@ -10,7 +10,7 @@ It expands on the benefits and drawbacks compared to the monolithic architecture
 
 # Why microservices?
 
-The industry standard approach for deploying Java EE applications is packing all components into single EAR/WAR archive and deploying the archive on an application server. Although this approach has several advantages, particularly from the ease-of-development perspective, it leads to monolithic architecture, makes applications difficult to maintain, and â€“ particularly important â€“ makes such applications more difficult and sometimes impossible to scale to meet today's real world demands, especially in PaaS (cloud) environments.
+The industry standard approach for deploying Java EE applications is packing all components into single EAR/WAR archive and deploying the archive on an application server. Although this approach has several advantages, particularly from the ease-of-development perspective, it leads to monolithic architecture, makes applications difficult to maintain, and - particularly important - makes such applications more difficult and sometimes impossible to scale to meet today's real world demands, especially in PaaS (cloud) environments.
 
 Microservice architecture addresses these shortcomings by decomposing an application into a set of microservices. Each microservice has well-defined functionalities and an interface to communicate with other microservices (such as REST, WSDL, or if needed even RMI). Most often then not, microservices are stateless. 
 
@@ -686,6 +686,10 @@ In the next post we will be focusing on deploying our microservices into docker 
 
 # Read on
 
-- Get familiar with [KumuluzEE](https://ee.kumuluz.com)
+- Get familiar with [KumuluzEE](KumuluzEE)
 - View the code on [GitHub](https://github.com/TFaga/kumuluzee-example)
 - Discover [microservices](http://microservices.io)
+
+[KumuluzEE]:   https://ee.kumuluz.com
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-help]: https://github.com/jekyll/jekyll-help

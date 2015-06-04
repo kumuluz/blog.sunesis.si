@@ -76,7 +76,7 @@ Lets use KumuluzEE to see this in action. Supposed we would like to create an on
 
 With traditional application servers we would normally create a monolithic EAR package that would include our business logic and several WAR packages. Our architecture would look something like this:
 
-![Monolithic architecture](https://dl.dropboxusercontent.com/u/16277758/monolithic.png)
+![Monolithic architecture]({{ site.baseurl }}/assets/images/posts/2015-06-04-microservices-with-java-ee-and-kumuluzee/monolithic.png)
 
 We would have several beans deployed that would handle all the business logic, those would use a JPA module that would handle the connection to an underlying database as well as act as our ORM. We would have a web layer, which would consist of REST interfaces. These would call our business logic. And a static HTML5 JavaScript web application, which would call our REST interfaces. All the components would be packaged together into a single EAR and deployed to the application server.
 

@@ -584,6 +584,10 @@ a, button {
 			font-size: 13px;
 			text-align: left;
 			color: #A1AAB6;
+
+            @media(max-width: 991px) {
+                text-align: center;
+            }
 		}
 
         .links {
@@ -595,7 +599,7 @@ a, button {
             ul {
             list-style-type: none;
             padding: 0;
-            
+
             li {
                 display: inline-block;
                 &.active {
@@ -618,6 +622,10 @@ a, button {
                         padding: 15px 17px 15px 0px;
                     }
                 }
+            }
+
+            @media(max-width: 991px) {
+                text-align: center;
             }
         }
         }

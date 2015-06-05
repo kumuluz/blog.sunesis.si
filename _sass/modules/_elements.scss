@@ -183,4 +183,11 @@ textarea {
 	}
 }
 
+ul.share-buttons{
+    list-style: none;
+    padding: 0;
 
+    li {
+      display: inline;
+    }
+}

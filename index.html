@@ -31,7 +31,14 @@ layout: default
               <div class="intro">
                 {{ post.excerpt }}
               </div>
-              <a href="{{ post.url | prepend: site.baseurl }}" class="continue-reading">Continue reading this post</a>
+              <div class="row">
+                <div class="col-md-6 continue-reading">
+                  <a href="{{ post.url | prepend: site.baseurl }}">Continue reading this post</a>
+                </div>
+                <div class="col-md-6 share-post">
+                  {% include share-page.html page=post %}
+                </div>
+              </div>              
             </div>
           {% endfor %}
 

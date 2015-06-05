@@ -7,10 +7,10 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 	<meta name="twitter:card" content="summary">
-	<!-- <meta name="twitter:site" content="@publisher_handle"> -->
+	<meta name="twitter:site" content="@tlfaga">
 	<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 	<meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-	<!-- <meta name="twitter:creator" content="@author_handle"> -->
+	<meta name="twitter:creator" content="{% if page.author %}@{{ site.data.authors[page.author].twitter }}{% else %}@tlfaga{% endif %}">
 	<meta name="twitter:image" content="/favicon-194x194.png">
 
 	<!-- Open Graph data -->
@@ -25,6 +25,10 @@
 	<!-- <meta property="article:section" content="Article Section">
 	<meta property="article:tag" content="Article Tag"> -->
 	<!-- <meta property="fb:admins" content="Facebook numberic ID"> -->
+
+	<meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+	<meta itemprop="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta itemprop="image" content="/favicon-194x194.png">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">

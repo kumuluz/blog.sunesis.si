@@ -205,7 +205,7 @@ Now we need to add the appropriate dependencies. As mentioned the framework is c
 
 All modules are versioned and released together, which helps reducing cross version conflicts and bugs. So it is recommended to define a property with the current version of KumuluzEE and use it with every dependency.
 
-> NOTE: Use the same version for every module as not doing so might result in unexpected behavior.
+NOTE: Use the same version for every module as not doing so might result in unexpected behavior.
 
 `FILE ./catalogue/pom.xml`
 
@@ -262,7 +262,7 @@ Let's add a simple HTML file.
 
 And this is all you need to do. The `kumuluzee-core` package provides the class `com.kumuluz.ee.EeApplication` with a main method that will bootstrap your app. If you have your project opened in an IDE (IntelliJ, Eclipse, ...), you can now start the microservice creating a new run configuration, selecting `Java application` and enter the above class as the `Main class` attribute. If however you are looking to run it from the terminal (as will be the case on a server and various PaaS environments), then you run it directly from the class files in the target directory.
 
-> Note: If you forget to add the `webapp` folder or accidentally misplace it, KumuluzEE will warn you with very descriptive messages.
+NOTE: If you forget to add the `webapp` folder or accidentally misplace it, KumuluzEE will warn you with very descriptive messages.
 
 To do so, you must include the `maven-dependency-plugin` to your `pom.xml` file, which will copy all your dependencies together with your classes.
 
@@ -514,7 +514,7 @@ public class BookOrder {
 
 Now let's implement the orders module. We'll create an order resource that will contain two methods; `placeOrder(Book)` and `getOrder()`. We need to add the correct dependencies, a JAX-RS application and a JAX-RS resource.
 
-> NOTE: Don't forget to add the `webapp` folder to the root of your orders resource directory. You may also need to add a file inside the directory for certain tools to include the folder. In any case you should get very descriptive error messages.
+NOTE: Don't forget to add the `webapp` folder to the root of your orders resource directory. You may also need to add a file inside the directory for certain tools to include the folder. In any case you should get very descriptive error messages.
 
 `FILE ./orders/pom.xml`
 
@@ -626,7 +626,7 @@ public class OrdersResource {
 
 As you can see the microservice is exactly the same as any other Java EE app. As of right now we have to manually manage transactions as the JTA module is not yet available. We can do so by either creating a simple CDI interceptor that will start and commit them or manually do it in every method. Either way, sometimes a bit more transparency may be a good thing.
 
-> NOTE: A microservice can and should contain multiple REST resources. To put it differently; it should contain as many REST resources as it needs to perform the functions it is designed to do.
+> A microservice can and should contain multiple REST resources. To put it differently; it should contain as many REST resources as it needs to perform the functions it is designed to do.
 
 We can also notice that we are injecting our `EntityManager` with the `@PersistenceContext` annotation. Since we have included CDI to our microservice this will work as expected. We do however need to make sure that we have included the `beans.xml` file in our `META-INF` directory. That way we tell CDI to enable injection in this module.
 

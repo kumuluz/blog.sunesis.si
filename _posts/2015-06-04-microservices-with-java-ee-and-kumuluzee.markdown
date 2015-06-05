@@ -213,7 +213,7 @@ NOTE: Use the same version for every module as not doing so might result in unex
 
 {% highlight xml %}
 <properties>
-    <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
+    <kumuluzee.version>1.0.0</kumuluzee.version>
 </properties>
 {% endhighlight %}
 
@@ -358,7 +358,7 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
 
 {% highlight xml %}
 <properties>
-    <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
+    <kumuluzee.version>1.0.0</kumuluzee.version>
 </properties>
 
 ...
@@ -522,7 +522,7 @@ NOTE: Don't forget to add the `webapp` folder to the root of your orders resourc
 
 {% highlight xml %}
 <properties>
-    <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
+    <kumuluzee.version>1.0.0</kumuluzee.version>
 </properties>
 
 ...

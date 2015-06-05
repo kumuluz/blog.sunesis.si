@@ -136,15 +136,15 @@ Our project structure will look like this:
 
 ~~~
 .
-+-- models
-|   +-- src
-|   |   +-- main
-|   |   +-- test
 +-- catalogue
 |   +-- src
 |   |   +-- main
 |   |   +-- test
 |   +-- pom.xml
++-- models
+|   +-- src
+|   |   +-- main
+|   |   +-- test
 +-- orders
 |   +-- src
 |   |   +-- main
@@ -284,7 +284,7 @@ To do so you must include the `maven-dependency-plugin` to your `pom.xml` file w
 Run `maven package` and then you can start your microservice using the following command:
 
 {% highlight bash %}
-$ java -cp target/classes:target/dependency/* com.kumuluz.ee.EeApplication
+$ java -cp catalogue/target/classes:catalogue/target/dependency/* com.kumuluz.ee.EeApplication
 {% endhighlight %}
 
 Go to http://localhost:8080/ in your browser and you should see the HTML file that we added.
@@ -293,7 +293,7 @@ And that is it. We went through our project structure and a basic overview of wh
 
 ## Using standard Java EE to implement our microservices
 
-Let's add the remaining required dependencies. We will need JAX-RS for the REST interfaces and JPA for the database layer. For simplicity we will add CDI as well, as it comes with `EntityManager` injection using `@PersistenceContext`, however we could just as well do without to keep our microservice even lighter.
+Let's add the remaining required dependencies. We will need JAX-RS for the REST interfaces (JPA will be included in the `models` module). For simplicity we will add CDI as well, as it comes with `EntityManager` injection using `@PersistenceContext`, however we could just as well do without to keep our microservice even lighter.
 
 `FILE ./catalogue/pom.xml`
 
@@ -305,17 +305,20 @@ Let's add the remaining required dependencies. We will need JAX-RS for the REST 
 </dependency>
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
-    <artifactId>kumuluzee-jpa</artifactId>
-    <version>${kumuluzee.version}</version>
-</dependency>
-<dependency>
-    <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-cdi</artifactId>
     <version>${kumuluzee.version}</version>
 </dependency>
 {% endhighlight %}
 
 Again if we wanted additional components, as of this writing we can use these additional ones.
+
+{% highlight xml %}
+<dependency>
+    <groupId>com.kumuluz.ee</groupId>
+    <artifactId>kumuluzee-jpa</artifactId>
+    <version>${kumuluzee.version}</version>
+</dependency>
+{% endhighlight %}
 
 {% highlight xml %}
 <dependency>
@@ -348,6 +351,12 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
 `FILE ./models/pom.xml`
 
 {% highlight xml %}
+<properties>
+    <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
+</properties>
+
+...
+
 <dependency>
     <groupId>com.kumuluz.ee</groupId>
     <artifactId>kumuluzee-jpa</artifactId>
@@ -371,7 +380,8 @@ In the JPA module we will add our `persistence.xml` and entity classes that will
              version="2.1">
     <persistence-unit name="books" transaction-type="RESOURCE_LOCAL">
 
-        <class>com.acme.books.models.User</class>
+        <class>com.acme.books.models.Book</class>
+        <class>com.acme.books.models.BookOrder</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
@@ -409,7 +419,7 @@ public class Book {
     private String author;
 	
     @OneToMany(mappedBy="book")
-    private List<Order> orders;
+    private List<BookOrder> bookOrders;
 
     public Integer getId() {
         return id;
@@ -442,6 +452,13 @@ public class Book {
     public void setAuthor(String author) {
         this.author = author;
     }
+    public List<BookOrder> getBookOrders() {
+        return bookOrders;
+    }
+
+    public void setBookOrders(List<BookOrder> bookOrders) {
+        this.bookOrders = bookOrders;
+    }
 }
 {% endhighlight %}
 
@@ -449,8 +466,8 @@ public class Book {
 
 {% highlight java %}
 @Entity
-@NamedQuery(name="Order.findAll", query="SELECT o FROM Order o")
-public class Order {
+@NamedQuery(name="BookOrder.findAll", query="SELECT o FROM Order o")
+public class BookOrder {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -493,12 +510,20 @@ public class Order {
 
 Now let's implement the orders module. We'll create an order resource that will contain two methods; `placeOrder(Book)` and `getOrder()`. We need to add the correct dependencies, a JAX-RS application and a JAX-RS resource.
 
+> NOTE: Don't forget to add the `webapp` folder to the root of your orders resource directory. You may also need to add a file inside the directory for certain tools to include the folder. In any case you should get very descriptive error messages.
+
 `FILE ./orders/pom.xml`
 
 {% highlight xml %}
+<properties>
+    <kumuluzee.version>1.0.0-alpha.1</kumuluzee.version>
+</properties>
+
+...
+
 <dependency>
     <groupId>com.acme.books</groupId>
-    <artifactId>books.models</artifactId>
+    <artifactId>books-models</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
 <dependency>
@@ -557,8 +582,8 @@ And the resource.
 
 {% highlight java %}
 @Path("/orders")
-@Produces(ContentType.APPLICATION_JSON)
-@Consumes(ContentType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 @RequestScoped
 public class OrdersResource {
 
@@ -569,18 +594,18 @@ public class OrdersResource {
     @Path("/{id}")
     public Response getOrder(@PathParam("id") Integer id) {
 
-        Order o = em.find(Order.class, id);
+        BookOrder o = em.find(BookOrder.class, id);
 
         if (o == null)
-            return Response.status(Status.NOT_FOUND).build();
+            return Response.status(Response.Status.NOT_FOUND).build();
 
-        return Response.ok(o).build;
+        return Response.ok(o).build();
     }
 
     @POST
     public Response placeOrder(Book b) {
        
-        Order o = new Order();
+        BookOrder o = new BookOrder();
         o.setBook(b);
         o.setOrderDate(new Date());
 
@@ -590,7 +615,7 @@ public class OrdersResource {
 
         em.getTransaction().commit();
 
-        return Response.created().entity(o).build();
+        return Response.status(Response.Status.CREATED).entity(o).build();
     }
 }
 {% endhighlight %}
@@ -599,11 +624,39 @@ As you can see the microservice is exactly the same as any other Java EE app. As
 
 > NOTE: A microservice can and should contain multiple REST resources. To put it differently; it should contain as many REST resources as it needs to perform the functions it is designed to do.
 
+We can also notice that we are injecting our `EntityManager` with the `@PersistenceContext` annotation. Since we have included CDI to our microservice this will work as expected. We do however need to make sure that we have included the `beans.xml` file in our `META-INF` directory. That way we tell CDI to enable injection in this module.
+
+`FILE ./orders/src/main/resources/META-INF/beans.xml`
+
+{% highlight xml %}
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+		http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/beans_1_2.xsd"
+       bean-discovery-mode="annotated">
+
+</beans>
+{% endhighlight %}
+
 Alright now let's return to our catalogue model and finish our example.
 
 ### Catalogue module
 
-We have already added the required dependencies when we were getting familiar with KumuluzEE so all that remains is the REST resource implementation that will actually be very similar to our orders.
+We have already added the required dependencies when we were getting familiar with KumuluzEE, except for the JPA module that we created before.
+
+
+`FILE ./catalogue/pom.xml`
+
+{% highlight xml %}
+<dependency>
+    <groupId>com.acme.books</groupId>
+    <artifactId>books-models</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+</dependency>
+{% endhighlight %}
+
+All that remains now is the REST resource implementation, that will actually be very similar to our orders resources.
 
 `FILE ./catalogue/src/main/java/com/acme/books/BooksApplication.java`
 
@@ -619,9 +672,9 @@ And the resource.
 `FILE ./catalogue/src/main/java/com/acme/books/BooksResource.java`
 
 {% highlight java %}
-@Path("/orders")
-@Produces(ContentType.APPLICATION_JSON)
-@Consumes(ContentType.APPLICATION_JSON)
+@Path("/books")
+@Produces(MediaType.APPLICATION_JSON)
+@Consumes(MediaType.APPLICATION_JSON)
 @RequestScoped
 public class BooksResource {
 
@@ -635,7 +688,7 @@ public class BooksResource {
 
         List<Book> books = query.getResultList();
 
-        return Response.ok(books).build;
+        return Response.ok(books).build();
     }
 
     @GET
@@ -658,10 +711,12 @@ public class BooksResource {
 
         em.getTransaction().commit();
 
-        return Response.created().entity(b).build();
+        return Response.status(Response.Status.CREATED).entity(b).build();
     }
 }
 {% endhighlight %}
+
+Again make sure you have added the same `beans.xml` file as before to your `META-INF` directory in order to enable injection.
 
 ## Putting it all together
 

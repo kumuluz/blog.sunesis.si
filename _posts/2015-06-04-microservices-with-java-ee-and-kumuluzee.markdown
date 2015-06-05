@@ -523,7 +523,7 @@ Now let's implement the orders module. We'll create an order resource that will 
 
 <dependency>
     <groupId>com.acme.books</groupId>
-    <artifactId>books-models</artifactId>
+    <artifactId>models</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
 <dependency>
@@ -651,7 +651,7 @@ We have already added the required dependencies when we were getting familiar wi
 {% highlight xml %}
 <dependency>
     <groupId>com.acme.books</groupId>
-    <artifactId>books-models</artifactId>
+    <artifactId>models</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
 {% endhighlight %}

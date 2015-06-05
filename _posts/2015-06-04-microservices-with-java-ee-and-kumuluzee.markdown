@@ -462,11 +462,11 @@ public class Book {
 }
 {% endhighlight %}
 
-`FILE ./models/src/main/java/com/acme/books/models/Order.java`
+`FILE ./models/src/main/java/com/acme/books/models/BookOrder.java`
 
 {% highlight java %}
 @Entity
-@NamedQuery(name="BookOrder.findAll", query="SELECT o FROM Order o")
+@NamedQuery(name="BookOrder.findAll", query="SELECT o FROM BookOrder o")
 public class BookOrder {
 
     @Id

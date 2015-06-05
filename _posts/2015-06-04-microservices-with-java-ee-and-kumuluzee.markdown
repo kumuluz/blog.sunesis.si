@@ -4,7 +4,7 @@ title:  "Microservices with Java EE and KumuluzEE"
 date:   2015-06-04
 author: tfaga
 categories: [Architecture]
-tags: [KumluzEE, Java EE]
+tags: [KumluzEE, Java EE, Microservices]
 ---
 
 This article explores the way the microservice architecture can be used together with Java EE using the new KumuluzEE framework.
@@ -126,7 +126,9 @@ We do however need to make sure that the microservices are stateless in nature a
 
 However, this kind of approach does not come without its drawbacks. Setting up and configuring Java EE projects to accompany this kind of architecture may not be so trivial.
 
-> We would also like to avoid using an application server instance for every microservice to reduce overhead and simplify configuration. This is where KumuluzEE comes in; it makes deployment and configuration seamless. Now that we know what we want to do, let's write our microservices (finally)!
+> We would also like to avoid using an application server instance for every microservice to reduce overhead and simplify configuration. This is where KumuluzEE comes in; it makes deployment and configuration seamless.
+
+Now that we know what we want to do, let's write our microservices (finally)!
 
 ## Maven
 

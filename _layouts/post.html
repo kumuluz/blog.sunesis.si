@@ -26,6 +26,10 @@ layout: default
 					</div>
 					<article class="content">
 						{{ content }}
+
+						{% for tag in page.tags %}
+							<span class="label label-primary">{{ tag }}</span>
+						{% endfor %}
 					</article>
 
 					<hr />

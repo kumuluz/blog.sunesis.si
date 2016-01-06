@@ -8,7 +8,7 @@ tags: [KumluzEE, Java EE, Microservices]
 ---
 
 This article explores the way the microservice architecture can be used together with Java EE using the new KumuluzEE framework.
-It expands on the benefits and drawbacks compared to the monolithic architecture that's popular in Java EE. It shows how to quickly and simply develop two microservices with standard Java EE using KumuluzEE. You can find the examples produced in this article on [GitHub](https://github.com/TFaga/kumuluzee-example).
+It expands on the benefits and drawbacks compared to the monolithic architecture that's popular in Java EE. It shows how to quickly and simply develop two microservices with standard Java EE using KumuluzEE. You can find the examples produced in this article on [GitHub](https://github.com/TFaga/kumuluzee-examples) under the name `microservice-simple`.
 
 # Why microservices?
 
@@ -741,10 +741,8 @@ We can now browse our microservices and see them in action on `http://localhost:
 
 We have shpwn how KumuluzEE can help you creating microservices using standard Java EE specification and APIs. With KumuluzEE we are able to bridge the gap between Java EE and the microservice architecture and focus solely on developing with what we already know but in a completely new way. KumuluzEE seamlessly sets everything up automatically so we don't have too, while still allowing a great deal of customisation to accommodate our needs. On top of that it makes it easy to run our microservices. This opens a world of possible cloud configurations with almost any cloud provider out there that are simply not possible now. It also provides all the other benefits of microservices, including more flexible architecture, easier maintenance, better scalability, etc. without the added configuration overhead.
 
-In the next post we will be focusing on deploying our microservices into Docker and various cloud environments.
-
 # Read on
 
 - Get familiar with [KumuluzEE](https://ee.kumuluz.com)
-- View the code on [GitHub](https://github.com/TFaga/kumuluzee-example)
+- View the code on [GitHub](https://github.com/TFaga/kumuluzee-examples)
 - Discover [microservices](http://microservices.io)

@@ -4,7 +4,7 @@ title:  "Microservices with Java EE and KumuluzEE"
 date:   2015-06-04
 author: tfaga
 categories: [Architecture]
-tags: [KumluzEE, Java EE, Microservices]
+tags: [KumuluzEE, Java EE, Microservices]
 ---
 
 This article explores the way the microservice architecture can be used together with Java EE using the new KumuluzEE framework.

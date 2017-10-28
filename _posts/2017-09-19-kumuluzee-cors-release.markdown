@@ -4,7 +4,7 @@ title:  "KumuluzEE CORS extension"
 date:   2017-09-19
 author: zvoneg
 categories: [KumuluzEE CORS]
-tags: [KumuluzEE, KumuluzEE CORS]
+tags: [KumuluzEE CORS, Cross-Origin]
 ---
 
 We are announcing the release of **KumuluzEE CORS** extension providing Cross-Origin Resource Sharing support to Java web applications.

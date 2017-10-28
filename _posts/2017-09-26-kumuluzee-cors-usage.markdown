@@ -7,8 +7,6 @@ categories: [KumuluzEE CORS]
 tags: [KumuluzEE CORS, Cross-Origin]
 ---
 
-# KumuluzEE CORS
-
 KumuluzEE CORS filter extension for the KumuluzEE microservice framework supports:
 
 * **Browser script perspective**: Allowing cross-domain requests, which are subject to tihter controls on the types of data that is exchanged.
@@ -16,7 +14,7 @@ KumuluzEE CORS filter extension for the KumuluzEE microservice framework support
 * **Web service perspective**: By utilising the origin URL reported by the browser the target cross-domain web service can determine, based 
  on its origin policy, wheather to allow or deny the request.
  
-## Usage
+# Usage
 
 To enable Cross-Origin support for your microservice you need to include the following dependency:
 ```xml
@@ -27,13 +25,13 @@ To enable Cross-Origin support for your microservice you need to include the fol
 </dependency>
 ```
 
-### CORS filter configuration
+## CORS filter configuration
 
 CORS filter can be configured in two ways: using **@CrossOrigin** annotation 
 or using **servlet filter** by providing cors-filter configuration section in prefered config source (i.e. config.yaml, etcd etc.).
 
 
-#### @CrossOrigin annotation
+### @CrossOrigin annotation
 
 Annotation can be put on the following classes of the JAX-RS application: 
 * Application class (with @ApplicationPath annotation)
@@ -76,7 +74,7 @@ public class MyResource {
 }
 ```
 
-##### Example of using @CrossOrigin annotation
+#### Example of using @CrossOrigin annotation
 
 **Application class**
 

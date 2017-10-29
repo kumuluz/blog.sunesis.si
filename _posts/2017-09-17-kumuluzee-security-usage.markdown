@@ -23,7 +23,7 @@ You can enable the KumuluzEE Security authentication with Keycloak by adding the
 </dependency>
 ```
 
-<!-- more -->
+<!--more-->
 
 ### Security configuration
 

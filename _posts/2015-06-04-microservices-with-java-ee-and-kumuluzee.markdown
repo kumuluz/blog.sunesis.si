@@ -3,7 +3,8 @@ layout: post
 title:  "Microservices with Java EE and KumuluzEE"
 date:   2015-06-04
 author: tfaga
-categories: [Architecture]
+author2: matjazbj
+categories: [KumuluzEE] [Architecture]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

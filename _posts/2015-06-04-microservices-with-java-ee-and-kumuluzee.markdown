@@ -4,7 +4,7 @@ title:  "Microservices with Java EE and KumuluzEE"
 date:   2015-06-04
 author: tfaga
 author2: matjazbj
-categories: [KumuluzEE] [Architecture]
+categories: [KumuluzEE, Architecture]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

@@ -2,6 +2,7 @@
 layout: default
 ---
 {% assign author = site.data.authors[page.author] %}
+{% assign author2 = site.data.authors[page.author2] %}
 
 <div id="blogpost">
 	<div id="blogpost-wrapper">
@@ -13,7 +14,7 @@ layout: default
 					</div>
 					<div class="author">
 						<img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
-						By {{ author.name }}, {{ page.date | date: "%b %-d, %Y" }}
+						By {{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}, {{ page.date | date: "%b %-d, %Y" }}
 
 						{% if page.categories %}
 							<span class="categories">

@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE CORS extension"
 date:   2017-09-19
 author: zvoneg
-categories: [KumuluzEE CORS]
+categories: [KumuluzEE, CORS]
 tags: [KumuluzEE CORS, Cross-Origin]
 ---
 

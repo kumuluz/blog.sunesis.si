@@ -25,6 +25,8 @@ To enable Cross-Origin support for your microservice you need to include the fol
 </dependency>
 ```
 
+<!--more-->
+
 ## CORS filter configuration
 
 CORS filter can be configured in two ways: using **@CrossOrigin** annotation 

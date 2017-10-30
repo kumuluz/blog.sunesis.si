@@ -131,7 +131,7 @@ defined with the configuration key `kumuluzee.env.name`. If the configuration ke
 - version: service version or NPM version range. Default value is "*", which resolves to the highest deployed
 version.
 - accessType: defines, which URL gets injected. Supported values are `AccessType.GATEWAY` and `AccessType.DIRECT`.
-Default is `AccessType.GATEWAY`. See section [Access Types](#access-types) for more information.
+Default is `AccessType.GATEWAY`.
 
 Injection is supported for the following field types:
 

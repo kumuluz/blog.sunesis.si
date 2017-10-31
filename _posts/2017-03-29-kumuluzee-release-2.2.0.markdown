@@ -19,3 +19,5 @@ We also removed the barrier for running the app inside a JAR to make way for the
 - Extended the build-in log messages to more easily construct them.
 - Removed the barrier for running inside JARs. WIth the other fixes this enables initial JAR support with outside dependencies.
 - Code cleanups.
+
+More details about this release can be found on [GitHub](https://github.com/kumuluz/kumuluzee/releases/tag/v2.2.0).

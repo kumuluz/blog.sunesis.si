@@ -67,3 +67,5 @@ The new release also fixed some small bugs, improved compatibility with the EE s
 #### Bugs
 
 - Fixed the `jboss-logging` dependency version mismatches.
+
+More details about this release can be found on [GitHub](https://github.com/kumuluz/kumuluzee/releases/tag/v2.4.0).

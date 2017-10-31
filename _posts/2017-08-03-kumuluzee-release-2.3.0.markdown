@@ -42,3 +42,5 @@ We're also hard at work on developing multiple extensions that enhance the devel
 - Fixed injection of the `ConfigurationUtil` in a CDI environment
 - Added the default Jetty logging to JUL to fix the problem of Weld (CDI) not printing stack traces when a
 dependency is not satisfied
+
+More details about this release can be found on [GitHub](https://github.com/kumuluz/kumuluzee/releases/tag/v2.3.0).

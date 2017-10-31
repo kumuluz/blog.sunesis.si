@@ -43,3 +43,4 @@ Another important addition to this version is the inclusion of built-in dynamic 
 - Added support for additional configuration parameters for fine tuning the underlying server
 - Various small bug fixes and enhancements
 
+More details about this release can be found on [GitHub](https://github.com/kumuluz/kumuluzee/releases/tag/v2.1.0).

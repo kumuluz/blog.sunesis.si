@@ -4,7 +4,7 @@ title:  "KumuluzEE Health extension"
 date:   2017-09-21
 author: skrjanec
 categories: [KumuluzEE, Health]
-tags: [KumuluzEE Health, microprofile-health]
+tags: [KumuluzEE Health, Microprofile-Health]
 ---
 
 We are announcing the initial version of **KumuluzEE Health** extension. KumuluzEE Health is a health check extension for the KumuluzEE microservice framework.

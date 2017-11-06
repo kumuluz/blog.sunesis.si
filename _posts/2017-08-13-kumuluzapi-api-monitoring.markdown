@@ -34,13 +34,13 @@ Response type statistics are recorded also for each Client application and API E
 
 ## KumuluzAPI Monitoring dashboards
 
-API level monitoring view is only one point of monitoring. KumuluzAPI also provides dashboards to monitor APIs, Client applications, API subscriptions and API Gateways within some organisation.
+API level monitoring view is only one monitoring perspective. KumuluzAPI also provides dashboards to monitor APIs, Client applications, API subscriptions and API Gateways within some organisation.
 
 Client application dashboard shows the subscription status, number of successful calls, number of failed calls (access policy violations), number of errors and average response time.
 
 ![Client applications dashboard]({{ site.baseurl }}/assets/images/posts/kumuluzapi-api-monitoring/kumuluzapi-client-applications-dashboard.png)
 
-
+More to follow.
 
 
 

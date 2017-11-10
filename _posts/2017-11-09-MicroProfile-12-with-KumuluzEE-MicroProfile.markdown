@@ -27,5 +27,8 @@ specification, are grouped in a profile that can be included as a single Maven d
 </dependency>
 ```
 
+You can use the [online pom generator](https://ee.kumuluz.com/generator/) to generate *pom* files with selected
+profiles or individual Maven dependencies.
+
 A detailed sample project, demonstrating the implementation of a microservice with KumuluzEE MicroProfile 1.2, is
 available on [GitHub](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-microProfile-1.2).

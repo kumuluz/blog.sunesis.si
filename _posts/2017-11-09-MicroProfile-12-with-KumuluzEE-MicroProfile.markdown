@@ -15,6 +15,9 @@ following MicroProfile APIs:
 - Fault Tolerance 1.0
 - JWT Authentication 1.0
 
+You can use our [online pom generator](https://ee.kumuluz.com/generator/) to quicly generate *pom* files with selected
+profiles or individual Maven dependencies.
+
 <!--more-->
 
 All the KumuluzEE components and extensions, which are mandatory for the compliance with the MicroProfile 1.2
@@ -26,9 +29,6 @@ specification, are grouped in a profile that can be included as a single Maven d
     <artifactId>kumuluzee-microProfile-1.2</artifactId>
 </dependency>
 ```
-
-You can use the [online pom generator](https://ee.kumuluz.com/generator/) to generate *pom* files with selected
-profiles or individual Maven dependencies.
 
 A detailed sample project, demonstrating the implementation of a microservice with KumuluzEE MicroProfile 1.2, is
 available on [GitHub](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-microProfile-1.2).

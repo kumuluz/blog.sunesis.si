@@ -298,9 +298,7 @@ order-deployment                1         1         1            1           1m
 
 At this point we can check the service registry to see if there are any registered instances. The image shows the result of etcd-browser:
 
-![alt text][service-registry]
-
-[service-registry]: ({{ site.baseurl }}/assets/images/posts/kumuluzee-kubernetes-p1/etcd-browser.png) "Instaces in service registry"
+![Service registry]({{ site.baseurl }}/assets/images/posts/kumuluzee-kubernetes-p1/etcd-browser.png)
 
 With kubernetes-orders microservice up and running we proceed with deployment of kubernetes-customers.
 

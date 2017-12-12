@@ -323,4 +323,6 @@ order-deployment                1         1         1            1           20m
 ## Conclusions
 In this blog, we showed how to configure KumuluzEE microservice for deployment to the Kubernetes cluster. All we needed to do was provide standard Kubernetes configuration files for Deployment, Service, and ConfigMap. KumuluzEE extensions for discovery and configuration took care of the seamless integration with Kubernetes.
 
+Source code of this blog is available at [KumuluzEE on Kubernetes - v1.0.0](https://github.com/zvonegit/kumuluzee-kubernetes/releases/tag/v1.0.0).
+
 In next part of the blog, we will show how to use KumuluzEE framework to expose health of the microservices to Kubernetes and how to configure autoscaling. Stay tuned.

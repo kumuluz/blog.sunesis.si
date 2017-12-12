@@ -325,4 +325,4 @@ In this blog, we showed how to configure KumuluzEE microservice for deployment t
 
 Source code of this blog is available at [KumuluzEE on Kubernetes - v1.0.0](https://github.com/zvonegit/kumuluzee-kubernetes/releases/tag/v1.0.0).
 
-In next part of the blog, we will show how to use KumuluzEE framework to expose health of the microservices to Kubernetes and how to configure autoscaling. Stay tuned.
+In the next part of the blog, we will show how to use KumuluzEE framework to expose health of the microservices to Kubernetes and how to configure autoscaling. Stay tuned.

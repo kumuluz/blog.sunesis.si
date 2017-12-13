@@ -7,7 +7,7 @@ categories: [KumuluzEE, Health]
 tags: [KumuluzEE Health, Microprofile-Health, Etcd health check]
 ---
 
-KumuluzEE Health extension health check set has been expanded with a **EtcdHealthCheck**.
+KumuluzEE Health extension health check set has been expanded with an **EtcdHealthCheck**.
 
 <!--more-->
 

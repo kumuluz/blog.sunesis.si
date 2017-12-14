@@ -36,13 +36,13 @@ kumuluzee:
         password: postgres
       disk-space-health-check:
         threshold: 100000000
-````
+```
 
 When **/health** endpoint is called the microservice will invoke data-source-health-check to get the status of the database connectivity and disk-space-health-check the get the status of the disk usage. If both checks return status OK the the overall health of the microservice is considered to be OK.
 
-If we initiate a health check request to *http://192.168.29.246:32583/health** the response is:
+If we initiate a health check request to *http://192.168.29.246:32583/health* the response is:
 
-````json
+```json
 {
   "outcome" : "UP",
   "checks" : [ {
@@ -56,7 +56,7 @@ If we initiate a health check request to *http://192.168.29.246:32583/health** t
     "state" : "UP"
   } ]
 }
-````
+```
 
 In addition to built-in health check providers it is also possible to implement custom health checks. For more details see [KumuluzEE Health](https://github.com/kumuluz/kumuluzee-health).
 
@@ -65,7 +65,7 @@ The main purpose of exposing the health status of KumuluzEE microservies is to a
 
 Liveness probe for the container is enabled by adding the following configuration to the container specification inside the deployment configuration:
 
-````yaml
+```yaml
 livenessProbe:
   httpGet:
     path: /health
@@ -80,20 +80,20 @@ To demonstrate how Kubernetes responds to the NKO status from the health endpoin
 
 Before we infect the service lets check the pod status of order microservice using command ```kubectl get pods -n kumuluzee-blog```. The command produces the following output:
 
-````sh
+```sh
 NAME                                           READY     STATUS    RESTARTS   AGE
 order-deployment-6bddc44584-kt4lh              1/1       Running   0          35m
-````
+```
 
 We can see that since the start there were no restarts of the container, i.e. the health check was always successful. Now lets infect the microservice by sending the following request:
 
-````sh
+```sh
 curl -X POST -d "false" -H "Content-Type: application/json" http://192.168.29.246:32583/v1/management/healthy
-````
+```
 
 If we check the health status manually we get the following response:
 
-````json
+```json
 {
   "outcome" : "DOWN",
   "checks" : [ {
@@ -107,40 +107,40 @@ If we check the health status manually we get the following response:
     "state" : "UP"
   } ]
 }
-````
+```
 
 By checking the output of ````kubectl get pods -n kumuluzee-blog```` we can se that Kubernetes performed a restart of the pod. Once pod is restarted the health check is back to OK as the infection is "destroyed" by the restart.
 
-````sh
+```sh
 NAME                                           READY     STATUS    RESTARTS   AGE
 order-deployment-6bddc44584-kt4lh              1/1       Running   1          1h
-````
+```
 
 ## Auto scaling KumuluzEE microservices
 We showed how to provide health status of the microservice using KumuluzEE Health extension and how to configure Kubernetes to monitor the health of the microservice by defining the Liveness probe for the container. If we would only deploy one instance of the microservice we would have a problem because we would experience a down time due to no alternative. To overcome this we should deploy multiple replicas of the pod and also we should configure a Horizontal Pod Autoscaler (HPA) to avoid the overload in case of pod failure.
 
 Before we create the HPA for our deployments we have to define CPU resources for each container. We do so by adding the following configuration to the Deployment yaml:
 
-````yaml
+```yaml
 resources:
   limits:
     cpu: 1
-````
+```
 
 Now we can create a HPA using the following command:
 
-````sh 
+```sh 
 kubectl autoscale deploy order-deployment -n kumuluzee-blog --cpu-percent=50 --min=2 --max=4
-````
+```
 
 With this we define that pod cannot use more than one unit of the CPU.
 
 To check the result of the command we perform ````kubectl get hpa -n kumuluzee-blog````:
 
-````sh 
+```sh 
 NAME               REFERENCE                     TARGETS           MINPODS   MAXPODS   REPLICAS   AGE
 order-deployment   Deployment/order-deployment   <unknown> / 50%   2         4         0          11s
-````
+```
 
 With above command we defined that Kubernetes should always run at least two replicas of the order-deployment and should not scale to more than four replicas. When HPA is created Kubernetes immediately starts creating another replica to match the HPA constraints. The configuration of HPA also says that order-deployment should be scaled when average CPU usage of the pods exceeds the 50%. If we load the microservice by sending couple of requests to the **/load** endpoint of the customers microservice, the HPA should start scaling the orders microservice.
 
@@ -163,7 +163,7 @@ order-deployment   Deployment/order-deployment   99% / 50%   1         4        
 ```
  
 ## Conclusions
-We have demonstrated how easy it is to implement health checks for KumuluzEE microservices using the KumuluzEE Health extension. We also showed how to configure Kubernetes Liveness probe to monitor the health of the microservice. Finally, we showed how to define HPA on Kubernetes to scale our microservices when load increases.
+We have demonstrated how easy it is to implement health checks for KumuluzEE microservices using the KumuluzEE Health extension. We also showed how to configure Kubernetes Liveness probe to monitor the health of the microservice. Finally, we showed how to define HPA to auto-scale our microservices when CPU load increases.
  
 Source code of the sample used in this blog is available at [KumuluzEE on Kubernetes - v2.0.0](https://github.com/zvonegit/kumuluzee-kubernetes/releases/tag/v2.0.0).
 

@@ -11,6 +11,8 @@ KumuluzEE Reactive is an extension for developing reactive microservices for the
 
 KumuluzEE Reactive provides integration with Vert.x distributed event bus, integration with Vert.x service discovery, easy-to-use annotations for developing microservices that listen to or produce messages on the Vert.x distributed event bus and a service discovery bridge for importing and exporting services from Vert.x Service Discovery to KumuluzEE Discovery (for Consul and etcd).
 
+<!--more-->
+
 Currently, Vert.x is supported. In the future, other reactive frameworks will be supported too (contributions are welcome).
 
 ## Usage
@@ -23,8 +25,6 @@ You can enable KumuluzEE Reactive Vert.x by adding the following dependency:
 	<version>${kumuluzee-reactive-vertx.version}</version>
 </dependency>
 ```
-
-<!--more-->
 
 To enable the service discovery bridge either a dependency for `kumuluzee-discovery-etcd` or `kumuluzee-discovery-consul` has to be added.
 ```xml

@@ -11,10 +11,10 @@ Implementing cloud-native applications by following microservice architecture br
 
 <!--more-->
 
-In this blog we focus on the health checks of the microservices and explain how to implement microservice using KumuluzEE framework together with KumuluzEE Health extension to expose the health status. We show how Kubernetes Deployments should be configured to allow Kubernetes to monitor the health status of the containers and initiate the self-healing process (initiate restart). In the final part of the blog we also describe how to define Horizontal Pod Autoscaler (HPA) to automatically scale KumuluzEE microservice when load exceedes the limits.
+In this blog we focus on the health checks of the microservices and explain how to implement microservice using KumuluzEE framework together with KumuluzEE Health extension to expose the health status. We show how Kubernetes Deployments should be configured to allow Kubernetes to monitor the health status of the containers and initiate the self-healing process (initiate restart). In the final part of the blog we also describe how to define Horizontal Pod Autoscaler (HPA) to automatically scale KumuluzEE microservice when load exceeds the limits.
 
 ## Providing health status of the microservice
-KumuluzEE provides fully Kubernetes compliant extension named KumuluzEE Health that provides easy, consistent and unified way of performing health checking and exposing health information. Enabling health checks on KumuluzEE microservice is achieved by including maven dependency:
+KumuluzEE provides fully Kubernetes compliant extension named KumuluzEE Health that provides an easy, consistent and unified way of performing health checking and exposing health information. Enabling health checks on KumuluzEE microservice is achieved by including maven dependency:
 
 ```xml
 <dependency>
@@ -62,7 +62,7 @@ If we initiate a health check request to *http://192.168.29.246:32583/health* th
 In addition to built-in health check providers it is also possible to implement custom health checks.
 
 ## Updating Kubernetes Deployments
-The main purpose of exposing the health status of KumuluzEE microservies is to allow Kubernetes to monitor the health status of the container in which microservice is running to detect unexpected failures. Kubernetes provides a build-in Liveness probe which is used to detect when a container should be restarted. It should be expected, especially for the applications running for long periods of time, to eventually transition to broken status and can only be recovered by the restart.
+The main purpose of exposing the health status of KumuluzEE microservices is to allow Kubernetes to monitor the health status of the container in which microservice is running to detect unexpected failures. Kubernetes provides a build-in Liveness probe which is used to detect when a container should be restarted. It should be expected, especially for the applications running for long periods of time, to eventually transition to broken status and can only be recovered by the restart.
 
 Liveness probe for the container is enabled by adding the following configuration to the container specification inside the deployment configuration:
 
@@ -75,11 +75,11 @@ livenessProbe:
   periodSeconds: 5
 ```
 
-The above configuration specifies that Kubernetes can check the status of the container by sending HTTP GET request to the **/health** endpoint on container port 8080 every 5 seconds. Configuration also defines that Kubernetes should wait 20s for container to start before sending the first health check request.
+The above configuration specifies that Kubernetes can check the status of the container by sending HTTP GET request to the **/health** endpoint on container port 8080 every 5 seconds. The configuration also defines that Kubernetes should wait 20s for container to start before sending the first health check request.
 
 To demonstrate how Kubernetes responds to the NKO status from the health endpoint of the microservice we intentionally infect the health of the **order** microservice by sending request to */management/healthy* endpoint setting the health status to false.
 
-Before we infect the service, lets check the pod status of orde microservice using command ```kubectl get pods -n kumuluzee-blog```. The command produces the following output:
+Before we infect the service, lets check the pod status of order microservice using command ```kubectl get pods -n kumuluzee-blog```. The command produces the following output:
 
 ```sh
 NAME                                           READY     STATUS    RESTARTS   AGE
@@ -110,7 +110,7 @@ If we check the health status manually we get the following response:
 }
 ```
 
-By checking the output of ````kubectl get pods -n kumuluzee-blog```` we can se that Kubernetes performed a restart of the pod. Once pod is restarted the health check is set back to OK as the infection is "destroyed" by the restart.
+By checking the output of the ````kubectl get pods -n kumuluzee-blog```` we can see that Kubernetes performed a restart of the pod. Once pod is restarted the health check is set back to OK as the infection is "destroyed" by the restart.
 
 ```sh
 NAME                                           READY     STATUS    RESTARTS   AGE
@@ -164,7 +164,7 @@ order-deployment   Deployment/order-deployment   99% / 50%   1         4        
 ```
  
 ## Conclusions
-We have demonstrated how easy it is to implement health checks for KumuluzEE microservices using the KumuluzEE Health extension. We also showed how to configure Kubernetes Liveness probe to monitor the health of the KumuluzEE microservice. Finally, we showed how to define HPA for auto-scalling of the KumuluzEE microservice.
+We have demonstrated how easy it is to implement health checks for KumuluzEE microservices using the KumuluzEE Health extension. We also showed how to configure Kubernetes Liveness probe to monitor the health of the KumuluzEE microservice. Finally, we showed how to define HPA for auto-scaling of the KumuluzEE microservice.
  
 Source code of the sample used in this blog is available at [KumuluzEE on Kubernetes - v2.0.0](https://github.com/zvonegit/kumuluzee-kubernetes/releases/tag/v2.0.0).
 

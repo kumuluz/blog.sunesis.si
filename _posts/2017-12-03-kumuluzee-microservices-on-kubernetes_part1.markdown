@@ -7,7 +7,7 @@ categories: [KumuluzEE, Kubernetes]
 tags: [KumuluzEE, KumuluzEE Discovery, KumuluzEE Config, Kubernetes]
 ---
 
-Today Kubernetes is one of the most commonly used runtime platforms for the containerized applications. Providing automatic bigpacking, horizontal scaling, automated rollouts and rollbacks, self-healing, service discovery, load balancing and other services out of the box, Kubernetes is a platform that suits microservices down to the ground.
+Today Kubernetes is one of the most commonly used runtime platforms for the containerized applications. Providing automatic binpacking, horizontal scaling, automated rollouts and rollbacks, self-healing, service discovery, load balancing and other services out of the box, Kubernetes is a platform that suits microservices down to the ground.
 
 However, equally as important as the utilities provided by the runtime environment is the ability of microservice framework to exploit provided utilities. In this three-part blog, we will demonstrate how KumuluzEE microservice framework is able to make use of Kubernetes for optimal execution of the microservices.
 

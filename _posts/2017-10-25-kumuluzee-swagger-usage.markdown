@@ -7,6 +7,9 @@ categories: [KumuluzEE, Swagger]
 tags: [KumuluzEE Swagger, Swagger-UI]
 ---
 
+**KumuluzEE Swagger was recently updated!** with separate dependency for the Swagger UI. Check [KumuluzEE Swagger - Updated](https://blog.kumuluz.com/kumuluzee/architecture/2018/01/14/kumuluzee-swagger-usage-updated)
+
+
 KumuluzEE Swagger (OpenAPI 2.0) extension provides support for documenting APIs using Swagger/OpenAPI v2 compliant annotations. Extension automatically hooks-up servlet that 
 exposes API specification on endpoint ```/api-specs/<jax-rs application-base-path>/swagger.[json|yaml]```. Extension also provides SwaggerUI which is added to your project
 to visualize API documentation and allow API consumers to interact with API endpoints.

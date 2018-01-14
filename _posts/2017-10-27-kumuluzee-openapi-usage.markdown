@@ -7,11 +7,12 @@ categories: [KumuluzEE, OpenAPI]
 tags: [KumuluzEE OpenAPI, Swagger-UI]
 ---
 
+
+**KumuluzEE OpenAPI was recently updated!** with separate dependency for the OpenAPI UI. Check [KumuluzEE OpenAPI - Updated](https://blog.kumuluz.com/kumuluzee/architecture/2018/01/14/kumuluzee-openapi-usage-updated)
+
 KumuluzEE OpenAPI extension allows you to document microservice APIs using OpenAPI v3 compliant annotations. Extension will automatically hook-up servlet that will 
 serve your API specifications on endpoint ```/api-specs/<jax-rs application-base-path>/openapi.[json|yaml]```. Furthermore, extensions allows you to integrate Swagger-UI into your
 microservice that will visualize APIs documentation and allow you to interact with your APIs resources.
-
-**KumuluzEE OpenAPI was recently updated** with separate dependency for the OpenAPI UI. Check [KumuluzEE OpenAPI - Updated](https://blog.kumuluz.com/kumuluzee/architecture/2018/01/14/kumuluzee-openapi-usage-updated)
  
 More details: [OpenAPI v3 Specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md).
 

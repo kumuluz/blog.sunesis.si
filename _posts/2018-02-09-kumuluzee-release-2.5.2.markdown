@@ -10,6 +10,7 @@ tags: [KumuluzEE, Java EE, Microservices]
 We are announcing the availability of KumuluzEE version 2.5.2.
 This version brings important features and fixes to various bugs.
 
+
 <!--more-->
 
 Some of the features are:

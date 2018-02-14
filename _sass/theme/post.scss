@@ -57,6 +57,17 @@
     img {
       max-width: 100%;
     }
+
+    ul {
+      list-style-type: square;
+      padding-left: 1.5rem;
+
+      li {
+        font-family: $font-asap;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+      }
+    }
   }
 
   &:after {

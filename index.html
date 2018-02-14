@@ -23,7 +23,7 @@ layout: default
               {% if author.gravatar %}
               <img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
               {% else %}
-              <img src="{{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+              <img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
               {% endif %}
 
               <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>

@@ -1,17 +1,20 @@
 /* modules */
-@import "modules/mixins";
-@import "modules/elements";
+@import 'modules/mixins';
+@import 'modules/elements';
 
 /* config variables */
-@import "config";
+@import 'config';
 
-@import "bootstrap/bootstrap";
+$primary: $red;
+$info: $blue-100;
+$enable-rounded: false;
+@import 'bootstrap/bootstrap';
 
 /* layout */
-@import "layout";
+@import 'layout';
+@import 'theme/theme';
 
 /* pages */
-@import "pages/blog";
-@import "pages/blogpost";
-@import "pages/404";
-
+// @import 'pages/blog';
+// @import 'pages/blogpost';
+@import 'pages/404';

@@ -1,0 +1,41 @@
+.navbar {
+  height: 90px;
+  background: $white;
+
+  img {
+    height: 45px;
+  }
+}
+
+.breadcrumbs {
+  height: 60px;
+  background: $blue-400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .breadcrumb {
+    background: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    .breadcrumb-item {
+      color: $white;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+
+      &.active {
+        color: $blue-100;
+        text-transform: none;
+      }
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+      content: '\f054';
+      color: $blue-100;
+      font-family: 'FontAwesome';
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+}

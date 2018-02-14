@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 ---
 
@@ -6,79 +6,64 @@ layout: default
   <div id="posts">
     <div class="container">
       <div class="row">
-        <div class="col-md-9">
+        <div class="col-8">
 
-          {% for post in site.posts %}
-            {% assign author = site.data.authors[post.author] %}
-            {% assign author2 = site.data.authors[post.author2] %}
+          {% for post in site.posts %} {% assign author = site.data.authors[post.author] %} {% assign author2 = site.data.authors[post.author2]
+          %}
 
-            <div class="post">
-              <div class="title">
-                <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </div>
-              <div class="author">
-                <img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
-                {{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}, {{ post.date | date: "%b %-d, %Y" }}
+          <article class="post">
+            {% if post.image %}
+            <div class="cover" style="background-image: url('{{ post.image }}')"></div>
+            {% endif %}
+            <h2>
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            <div class="author">
 
-                {% if post.categories %}
-                  <span class="categories">
-                    <i class="fa fa-folder"></i>
-                    {% for category in post.categories %}
-                      {{ category | capitalize }}
-                    {% endfor %}
-                  </span>
-                {% endif %}
-              </div>
-              <div class="intro">
-                {{ post.excerpt }}
-              </div>
-              <div class="row">
-                <div class="col-md-6 continue-reading">
-                  <a href="{{ post.url | prepend: site.baseurl }}">Continue reading this post</a>
-                </div>
-                <div class="col-md-6 share-post">
-                  {% include share-page.html page=post %}
-                </div>
-              </div>              
+              {% if author.gravatar %}
+              <img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+              {% else %}
+              <img src="{{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+              {% endif %}
+
+              <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
+              <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+              {% if post.categories %}
+              <span class="categories">
+                {% for category in post.categories %}
+                <span>{{ category | capitalize }}</span>
+                {% endfor %}
+              </span>
+              {% endif %}
             </div>
+            <div class="intro">
+              {{ post.excerpt }}
+            </div>
+            <div class="row">
+              <div class="col-md-6 continue-reading">
+                <a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+              </div>
+              <div class="col-md-6 share-post">
+                {% include share-page.html page=post %}
+              </div>
+            </div>
+          </article>
           {% endfor %}
-
-          <!-- <div class="pages">
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-          </div> -->
         </div>
-        <div class="col-md-3 sidebar">
+        <div class="col-4 sidebar">
           <div class="updates">
-            <strong>
-              Blog updates
-            </strong>
+            <h3>Blog updates </h3>
             <p>
-              Never miss an update. 
-              Subscribe to our feed or follow us on social media and get notified whenever we post something in the blog.
+              Never miss an update. Subscribe to our feed or follow us on social media and get notified whenever we post something in the
+              blog.
             </p>
+              <a class="btn btn-primary full-width" href="{{ " /feed.xml " | prepend: site.baseurl }}">
+                <i class="fa fa-rss"></i>
+                Subscribe
+              </a>
           </div>
 
-          <div class="follow-tw">
-            <a class="rss" href="{{ "/feed.xml" | prepend: site.baseurl }}">
-              <i class="fa fa-rss"></i>
-              Subscribe
-            </a>
-          </div>
-          <!-- <div class="best-hits">
-            <strong>Check out our best hits:</strong>
-            <a href="#">How to start a business</a>
-            <a href="#">How to sell online</a>
-            <a href="#">Climate change when needed</a>
-            <a href="#">Web development upstart</a>
-            <a href="#">Learn Rails in 30 days</a>
-          </div> -->
         </div>
       </div>
     </div>

@@ -1,0 +1,74 @@
+@import 'navbar';
+@import 'post';
+@import 'footer';
+
+.blue {
+  color: $blue-100 !important;
+}
+.blue-200 {
+  color: $blue-200 !important;
+}
+.blue-300 {
+  color: $blue-300 !important;
+}
+.blue-400 {
+  color: $blue-400 !important;
+}
+
+/* Product colors */
+.colorEE {
+  color: $ee;
+}
+.colorAPI {
+  color: $api;
+}
+.colorIntegration {
+  color: $integration;
+}
+.colorUX {
+  color: $ux;
+}
+.colorMarketplace {
+  color: $marketplace;
+}
+.colorPayment {
+  color: $payment;
+}
+.colorDevOps {
+  color: $devops;
+}
+.colorCCM {
+  color: $ccm;
+}
+.colorCrowdsensing {
+  color: $crowdsensing;
+}
+.colorRed {
+  color: $red;
+}
+
+.social-button {
+  height: 38px;
+  width: 38px;
+  color: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+
+  &.fa-facebook {
+    background: #3c5b99;
+  }
+  &.fa-twitter {
+    background: #00aced;
+  }
+  &.fa-google {
+    background: #dc4b38;
+  }
+  &.fa-linkedin {
+    background: #007bb6;
+  }
+  &.fa-reddit {
+    background: #ff4500;
+  }
+}

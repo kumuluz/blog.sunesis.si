@@ -6,7 +6,7 @@ layout: default
   <div id="posts">
     <div class="container">
       <div class="row">
-        <div class="col-8">
+        <div class="col-12 col-lg-9">
 
           {% for post in site.posts %} {% assign author = site.data.authors[post.author] %} {% assign author2 = site.data.authors[post.author2]
           %}
@@ -41,24 +41,24 @@ layout: default
               {{ post.excerpt }}
             </div>
             <div class="row">
-              <div class="col-md-6 continue-reading">
+              <div class="col-12 col-sm-6 mb-3 mb-sm-0 text-center continue-reading">
                 <a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
               </div>
-              <div class="col-md-6 share-post">
+              <div class="col-12 col-sm-6 share-post">
                 {% include share-page.html page=post %}
               </div>
             </div>
           </article>
           {% endfor %}
         </div>
-        <div class="col-4 sidebar">
+        <div class="col-12 col-lg-3 sidebar">
           <div class="updates">
-            <h3>Blog updates </h3>
+            <h4>Blog updates </h4>
             <p>
               Never miss an update. Subscribe to our feed or follow us on social media and get notified whenever we post something in the
               blog.
             </p>
-              <a class="btn btn-primary full-width" href="{{ " /feed.xml " | prepend: site.baseurl }}">
+              <a class="btn btn-primary full-width btn-sm" href="{{ " /feed.xml " | prepend: site.baseurl }}">
                 <i class="fa fa-rss"></i>
                 Subscribe
               </a>

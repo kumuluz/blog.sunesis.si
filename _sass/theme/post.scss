@@ -27,7 +27,7 @@
       height: 45px;
       width: 45px;
       border-radius: 50%;
-      margin-right: 0.75rem;
+      margin-right: 0.5rem;
     }
 
     .author-name,
@@ -87,6 +87,13 @@
     border-radius: 50%;
     max-width: 180px;
     max-height: 180px;
+
+    &.dual {
+      max-width: 90px;
+      max-height: 90px;
+      display: block;
+      margin-bottom: 1rem;
+    }
   }
 
   &:after {

@@ -26,6 +26,14 @@ layout: default
               <img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
               {% endif %}
 
+              {% if author2 %}
+                {% if author2.gravatar %}
+                <img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+                {% else %}
+                <img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
+                {% endif %}
+              {% endif %}
+
               <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
               <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
 

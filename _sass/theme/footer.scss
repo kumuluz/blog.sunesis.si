@@ -36,6 +36,8 @@
     padding-top: 240px;
 
     .links {
+      text-align: center;
+
       .title {
         font-size: 1.125rem;
         font-weight: 800;
@@ -46,9 +48,8 @@
           height: 4px;
           width: 80px;
           background: $blue-100;
-          margin-top: 10px;
+          margin: 10px auto;
           display: block;
-          margin-bottom: 10px;
         }
       }
       a {
@@ -76,5 +77,9 @@
     font-weight: 100;
     font-family: Rubik, sans-serif;
     margin-bottom: 60px;
+
+    a {
+      color: $grey;
+    }
   }
 }

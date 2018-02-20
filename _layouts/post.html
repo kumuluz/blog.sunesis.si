@@ -1,6 +1,5 @@
 ---
 layout: default
-comments: true
 ---
 {% assign author = site.data.authors[page.author] %}
 {% assign author2 = site.data.authors[page.author2] %}
@@ -44,16 +43,28 @@ comments: true
 				<div class="post-author p-3">
 					<div class="d-flex align-items-center">
 						<div class="pr-5">
-							{% if author.gravatar %}
-							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
+							{% if author2 %}
+							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid dual" alt="author" />
+							<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid dual" alt="author" />
 							{% else %}
-							<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
+								{% if author.gravatar %}
+								<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
+								{% else %}
+								<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
+								{% endif %}
 							{% endif %}
 						</div>
 						<div>
 							<h4>Written by <a href="https://github.com/{{author.github}}">{{author.name}}</a></h4>
 							{% if author.about %}
-							<p class="mt-3">{{author.about}}</p>
+							<p class="my-3">{{author.about}}</p>
+							{% endif %}
+
+							{% if author2 %}
+								<h4>and by <a href="https://github.com/{{author2.github}}">{{author2.name}}</a></h4>
+								{% if author2.about %}
+								<p class="my-3">{{author2.about}}</p>
+								{% endif %}
 							{% endif %}
 						</div>
 					</div>

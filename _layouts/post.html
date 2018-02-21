@@ -13,11 +13,21 @@ layout: default
 						{{ page.title }}
 					</h2>
 					<div class="author">
-						{% if author.gravatar %}
-						<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
-						{% else %}
-						<img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
-						{% endif %}
+						<div>
+							{% if author.gravatar %}
+							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+							{% else %}
+							<img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
+							{% endif %}
+
+							{% if author2 %}
+								{% if author2.gravatar %}
+								<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
+								{% else %}
+								<img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
+								{% endif %}
+							{% endif %}
+						</div>
 			
 						<span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
 						<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
@@ -30,28 +40,23 @@ layout: default
 								{% endfor %}
 							</span>
 						{% endif %}
-						<span class="tags ml-3">
-							{% for tag in page.tags %}
-								<span class="badge badge-pill badge-primary">{{ tag }}</span>
-							{% endfor %}
-						</span>
+					</div>
+					<div class="tags pt-3">
+						{% for tag in page.tags %}
+							<span class="badge badge-pill badge-primary">{{ tag }}</span>
+						{% endfor %}
 					</div>
 					<article class="content">
 						{{ content }}
 					</article>
 				</div>
 				<div class="post-author p-3">
-					<div class="d-flex align-items-center">
-						<div class="pr-5">
-							{% if author2 %}
-							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid dual" alt="author" />
-							<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid dual" alt="author" />
+					<div class="d-sm-flex align-items-center">
+						<div class="pr-5 text-center">
+							{% if author.gravatar %}
+							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
 							{% else %}
-								{% if author.gravatar %}
-								<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
-								{% else %}
-								<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
-								{% endif %}
+							<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
 							{% endif %}
 						</div>
 						<div>
@@ -59,15 +64,25 @@ layout: default
 							{% if author.about %}
 							<p class="my-3">{{author.about}}</p>
 							{% endif %}
-
-							{% if author2 %}
-								<h4>and by <a href="https://github.com/{{author2.github}}">{{author2.name}}</a></h4>
-								{% if author2.about %}
-								<p class="my-3">{{author2.about}}</p>
-								{% endif %}
+						</div>
+					</div>
+					{% if author2 %}
+					<div class="d-sm-flex align-items-center pt-3">
+						<div class="pr-5 text-center">
+							{% if author2.gravatar %}
+							<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
+							{% else %}
+							<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
+							{% endif %}	
+						</div>
+						<div>
+							<h4>and <a href="https://github.com/{{author2.github}}">{{author2.name}}</a></h4>
+							{% if author2.about %}
+							<p class="my-3">{{author2.about}}</p>
 							{% endif %}
 						</div>
 					</div>
+					{% endif %}
 				</div>
 
 				<div class="share-page">

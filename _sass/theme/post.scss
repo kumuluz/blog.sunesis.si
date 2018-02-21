@@ -22,6 +22,11 @@
   .author {
     display: flex;
     align-items: center;
+    flex-direction: column;
+
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
 
     .avatar {
       height: 45px;
@@ -37,15 +42,24 @@
       display: flex;
       align-items: center;
 
-      &:after {
-        content: '|';
-        font-weight: 200;
-        margin: auto 0.5rem;
+      @media (min-width: 576px) {
+        &:after {
+          content: '|';
+          font-weight: 200;
+          margin: auto 0.5rem;
+        }
       }
     }
 
     .date {
       font-weight: 400;
+    }
+  }
+  .tags {
+    text-align: center;
+
+    @media (min-width: 576px) {
+      text-align: left;
     }
   }
 
@@ -85,15 +99,8 @@
 
   img {
     border-radius: 50%;
-    max-width: 180px;
-    max-height: 180px;
-
-    &.dual {
-      max-width: 90px;
-      max-height: 90px;
-      display: block;
-      margin-bottom: 1rem;
-    }
+    max-width: 120px;
+    max-height: 120px;
   }
 
   &:after {

@@ -9,37 +9,20 @@ layout: default
 		<div class="container">
 				<div class="post">
 					<img class="img-fluid mb-5" src="{{ page.image }}" />
-					<h2>
+					<h2 class="title">
 						{{ page.title }}
 					</h2>
 					<div class="author">
-						<div>
-							{% if author.gravatar %}
-							<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
-							{% else %}
-							<img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
-							{% endif %}
-
-							{% if author2 %}
-								{% if author2.gravatar %}
-								<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
-								{% else %}
-								<img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
-								{% endif %}
-							{% endif %}
-						</div>
-			
-						<span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
-						<span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
-			  
+						<span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
 
 						{% if page.categories %}
 							<span class="categories">
 								{% for category in page.categories %}
-									<span>{{ category | capitalize }}</span>
+									<a href='#'>{{ category | capitalize }}</a>
 								{% endfor %}
 							</span>
 						{% endif %}
+						<span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
 					</div>
 					<div class="tags pt-3">
 						{% for tag in page.tags %}

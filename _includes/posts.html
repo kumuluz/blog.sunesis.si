@@ -12,46 +12,32 @@
                 %}
       
                 <article class="post">
-                  {% if post.image %}
-                  <div class="cover" style="background-image: url('{{ post.image }}')"></div>
-                  {% endif %}
-                  <h2>
-                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                  </h2>
-                  <div class="author">
-                    <div>
-                      {% if author.gravatar %}
-                      <img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
-                      {% else %}
-                      <img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
-                      {% endif %}
-      
-                      {% if author2 %}
-                        {% if author2.gravatar %}
-                        <img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=50&d={{"/assets/images/user.svg " | absolute_url }}" class="avatar" alt="author" />
-                        {% else %}
-                        <img src="{{"/assets/images/user.svg " | relative_url }}" class="avatar" alt="author" />
-                        {% endif %}
-                      {% endif %}
-                    </div>
-      
-                    <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
-                    <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      
+                  <div class="author">     
+                    <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
                     {% if post.categories %}
                     <span class="categories">
                       {% for category in post.categories %}
-                      <span>{{ category | capitalize }}</span>
+                      <a href="#">{{ category }}</a>
                       {% endfor %}
                     </span>
                     {% endif %}
+                    <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
                   </div>
+
+                  <h2 class="title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+
+                  {% if post.image %}
+                  <div class="cover" style="background-image: url('{{ post.image }}')"></div>
+                  {% endif %}
+
                   <div class="intro">
                     {{ post.excerpt }}
                   </div>
                   <div class="row">
                     <div class="col-12 col-sm-6 mb-3 mb-sm-0 text-center continue-reading">
-                      <a class="btn btn-primary" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+                      <a class="btn btn-primary px-3" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
                     </div>
                     <div class="col-12 col-sm-6 share-post">
                       {% include share-page.html page=post %}

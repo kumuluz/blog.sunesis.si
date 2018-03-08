@@ -1,96 +1,80 @@
-a,
-button {
-  &:focus {
-    outline: none;
-  }
-}
-
 body {
   overflow-x: hidden;
   width: 100%;
 }
 
-/* Basics */
-
-h1 {
-  font-family: $font-rubik;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  font-weight: 300;
-}
-.h1-subtitle {
-  font-family: $font-asap;
-  font-size: 2rem;
-  line-height: 2.375rem;
-}
-
-h2 {
-  font-family: $font-rubik;
-  font-size: 2rem;
-  line-height: 2.5rem;
-}
-
-.h2-subtitle {
-  font-family: $font-asap;
-  font-size: 1.5rem;
-  line-height: 1.876rem;
-}
-
-h3 {
-  font-family: $font-rubik;
-  font-size: 1.625rem;
-  line-height: 2rem;
-}
-
-.h3-subtitle {
-  font-family: $font-asap;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-}
-
-h4 {
-  font-family: $font-rubik;
-  font-size: 1.25rem;
-  line-height: 1.625rem;
-}
-
-p {
-  font-family: $font-asap;
-  font-size: 1.25rem;
-  line-height: 1.875rem;
-}
-.p-small {
-  font-family: $font-asap;
-  font-size: 1.125rem;
-  line-height: 1.625rem;
-}
-
-/* Buttons */
-
-.btn {
-  padding-left: 30px;
-  padding-right: 30px;
-  font-weight: 500;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $fjalla-one;
   text-transform: uppercase;
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary:active,
-.btn-primary.active,
-.open > .dropdown-toggle.btn-primary {
-  color: $white;
-  background: $red;
-  background: $red-gradient;
-  border-color: $red;
+p,
+li {
+  font-family: $open-sans;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.125rem;
+  color: $grey-500;
 }
 
-.btn-info,
-.btn-info:hover,
-.btn-info:focus {
-  color: $white;
+ul,
+ol {
+  padding-left: 20px;
 }
 
+p b,
+li b {
+  font-weight: 800;
+}
+
+.btn-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 500;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  &:hover {
+    box-shadow: 0 15px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* Overrides */
+.btn {
+  text-transform: uppercase;
+}
+
+/* Util */
+.full-height {
+  height: 100%;
+}
 .full-width {
   width: 100%;
+}
+.clickable {
+  cursor: pointer;
+}
+
+.bg-blue-700 {
+  background: $blue-700;
+}
+
+.youtube-video {
+  position: relative;
+  padding-bottom: 50%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

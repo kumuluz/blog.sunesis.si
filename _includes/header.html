@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light sticky-top">
+<nav class="navbar navbar-light">
   <div class="container">
     <a href="{{ site.baseurl }}/" class="navbar-brand">
       <img alt="" src="{{ " /assets/images/logo.svg " | prepend: site.baseurl }}" />
@@ -6,21 +6,46 @@
   </div>
 </nav>
 
-<div class="breadcrumbs">
+<div class="banner simplified p-3 p-sm-5">
   <div class="container">
-    <nav class="breadcrumb">
-      <a class="breadcrumb-item" href="{{ site.baseurl }}/">Home</a>
-      {% if page.title %}
-      <a class="breadcrumb-item" href="{{ site.baseurl }}/">All posts</a>
-      <span class="breadcrumb-item active">{{page.title}}</span>
-      {% else %}
-      <span class="breadcrumb-item active">All posts</span>
-      {% endif %}
-    </nav>
+    <div class="row">
+      <div class="col-12 xl-8">
+        <h1>Blog</h1>
+        <p>
+          Kumuluz is a software platform, which considerably speeds-up the development of blockchain applications, makes applications
+          technology agnostic, scalable, resilient and secure.
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 
-<button type="button" class="btn btn-primary" id="to-top">
+<div class="sub-nav">
+  <div class="container">
+    <ul>
+      <li>
+        <a class="{% if '/' == page.url %}active{% endif %}" href="/">All</a>
+      </li>
+      <li>
+        <a class="{% if '/category/announcements.html' == page.url %}active{% endif %}" href="/category/announcements.html">Big announcements</a>
+      </li>
+      <li>
+        <a class="{% if '/category/product.html' == page.url %}active{% endif %}" href="/category/product.html">Product</a>
+      </li>
+      <li>
+        <a class="{% if '/category/developers.html' == page.url %}active{% endif %}" href="/category/developers.html">For developers</a>
+      </li>
+      <li>
+        <a class="{% if '/category/news.html' == page.url %}active{% endif %}" href="/category/news.html">News and media</a>
+      </li>
+      <li>
+        <a class="{% if '/category/community.html' == page.url %}active{% endif %}" href="/category/community.html">Community</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<button type="button" class="btn btn-primary btn-fab" id="to-top">
   <i class="fa fa-chevron-up"></i>
 </button>
 

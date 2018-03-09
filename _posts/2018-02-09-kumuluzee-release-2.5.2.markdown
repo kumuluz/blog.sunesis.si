@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE 2.5.2 released"
 date:   2018-02-09
 author: tfaga
-categories: [KumuluzEE, Announcement]
+categories: [Product, Announcement]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

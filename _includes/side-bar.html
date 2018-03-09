@@ -1,0 +1,59 @@
+<div class="updates">
+    <h4>Blog updates </h4>
+    <p>
+      Never miss an update. Subscribe to our feed or follow us on social media and get notified whenever we post something in the
+      blog.
+    </p>
+      <a class="btn btn-primary full-width btn-sm" href="{{ " /feed.xml " | prepend: site.baseurl }}">
+        <i class="fa fa-rss"></i>
+        Subscribe
+      </a>
+  </div>
+
+  <div class="updates mt-5">
+    <h5>Pre-ICO comming in march</h5>
+    <p>Subscribe to our mailing list to get the latest news and updates.</p>
+    <br/>
+    <form>
+      <input class="form-control mb-3" type="text" placeholder="Your e-mail">
+      <button class="btn btn-primary full-width">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="recommended mt-5">
+    <h3>Top posts</h3>
+    {% assign announcement = site.categories.Announcement.first %}
+    {% if announcement %}
+    <h6>Big announcements</h6>
+    <h4><a href="{{ announcement.url | prepend: site.baseurl }}">{{announcement.title}}</a></h4>
+    <hr/>
+    {% endif %}
+    
+    {% assign productPost = site.categories.Product.first %}
+    {% if productPost %}
+    <h6>Product</h6>
+    <h4><a href="{{ productPost.url | prepend: site.baseurl }}">{{productPost.title}}</a></h4>
+    <hr/>
+    {% endif %}
+
+    {% assign devPost = site.categories.Developers.first %}
+    {% if devPost %}
+    <h6>For Developers</h6>
+    <h4><a href="{{ devPost.url | prepend: site.baseurl }}">{{devPost.title}}</a></h4>
+    <hr/>
+    {% endif %}
+
+    {% assign newsPost = site.categories.News.first %}
+    {% if newsPost %}
+    <h6>News and Media</h6>
+    <h4><a href="{{ newsPost.url | prepend: site.baseurl }}">{{newsPost.title}}</a></h4>
+    <hr/>
+    {% endif %}
+
+    {% assign communityPost = site.categories.Community.first %}
+    {% if communityPost %}
+    <h6>Community</h6>
+    <h4><a href="{{ communityPost.url | prepend: site.baseurl }}">{{communityPost.title}}</a></h4>
+    <hr/>
+    {% endif %}
+  </div>

@@ -2,7 +2,7 @@
         <div id="posts">
           <div class="container">
             <div class="row">
-              <div class="col-12 col-lg-9">
+              <div class="col-12 col-lg-8">
                 {% assign posts = site.posts %}
                 {% if include.category %}
                 {% assign posts = site.categories[include.category] %}
@@ -17,7 +17,7 @@
                     {% if post.categories %}
                     <span class="categories">
                       {% for category in post.categories %}
-                      <a href="#">{{ category }}</a>
+                      <a href="/category/{{category | downcase }}.html">{{ category }}</a>
                       {% endfor %}
                     </span>
                     {% endif %}
@@ -46,18 +46,8 @@
                 </article>
                 {% endfor %}
               </div>
-              <div class="col-12 col-lg-3 sidebar">
-                <div class="updates">
-                  <h4>Blog updates </h4>
-                  <p>
-                    Never miss an update. Subscribe to our feed or follow us on social media and get notified whenever we post something in the
-                    blog.
-                  </p>
-                    <a class="btn btn-primary full-width btn-sm" href="{{ " /feed.xml " | prepend: site.baseurl }}">
-                      <i class="fa fa-rss"></i>
-                      Subscribe
-                    </a>
-                </div>
+              <div class="col-12 col-lg-4 sidebar">
+                {% include side-bar.html %}
       
               </div>
             </div>

@@ -23,6 +23,8 @@ All implementations of the listed components have been updated to the latest Jav
 * JSON-B 1.0
 * Java Mail 1.6
 
+<!--more-->
+
 We're including the reference implementation for both of the new components, with alternative implementations planned in the future when they become available.
 
 Additionally both JSON-P and JSON-B can now be used with JAX-RS automatically. You don't need to do anything, simply add the relevant components as your dependencies and it will work.

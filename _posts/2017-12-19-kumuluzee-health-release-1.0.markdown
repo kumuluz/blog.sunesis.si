@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "KumuluzEE Health 1.0 released"
-date:   2018-03-12
+date:   2017-12-19
 author: skrjanec
 categories: [KumuluzEE, Health]
 tags: [KumuluzEE Health, Microprofile-Health]

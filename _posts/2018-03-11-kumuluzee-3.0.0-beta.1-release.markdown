@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KumuluzEE 3.0.0 beta 1 release is here!"
+title:  "KumuluzEE 3.0.0 beta 1 release with Java EE 8 and Java 9+ is here!"
 date:   2018-03-11
 author: tfaga
 categories: [KumuluzEE]

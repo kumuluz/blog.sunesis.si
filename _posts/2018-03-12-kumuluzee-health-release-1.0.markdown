@@ -31,4 +31,4 @@ When developing your microservices you will want to include an endpoint which sh
 More details at [KumuluzEE Health](https://github.com/kumuluz/kumuluzee-health/blob/master/README.md).
 
 Also check out the
-[KumuluzEE Health sample](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-health)
+[KumuluzEE Health sample](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-health).

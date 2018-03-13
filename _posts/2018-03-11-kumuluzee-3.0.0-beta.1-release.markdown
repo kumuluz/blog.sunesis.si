@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KumuluzEE 3.0.0 beta 1 release is here!"
+title:  "KumuluzEE 3.0.0 beta 1 release with Java EE 8 and Java 9+ is here!"
 date:   2018-03-11
 author: tfaga
 categories: [KumuluzEE]
@@ -22,6 +22,8 @@ All implementations of the listed components have been updated to the latest Jav
 
 * JSON-B 1.0
 * Java Mail 1.6
+
+<!--more-->
 
 We're including the reference implementation for both of the new components, with alternative implementations planned in the future when they become available.
 

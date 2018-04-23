@@ -16,11 +16,13 @@ Moreover you can create your own ERC20 token and use it as a payment for your se
 
 You can enable KumuluzEE Ethereum support by adding the following dependency:
 
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee.ethereum</groupId>
     <artifactId>kumuluzee-ethereum-web3j</artifactId>
     <version>${kumuluzee-ethereum.version}</version>
 </dependency>
+{% endhighlight %}
 
 
 Read more at [KumuluzEE Ethereum](https://github.com/kumuluz/kumuluzee-ethereum)

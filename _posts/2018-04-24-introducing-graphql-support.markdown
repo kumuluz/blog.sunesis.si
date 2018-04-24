@@ -25,7 +25,7 @@ You can enable the KumuluzEE GraphQL support by adding the following dependency:
 </dependency>
 {% endhighlight %}
 
-If you want to add graphical interface (GraphiQL)[https://github.com/graphql/graphiql], you can include the following dependency:
+If you want to add graphical interface [GraphiQL](https://github.com/graphql/graphiql), you can include the following dependency:
 
 {% highlight xml %}
 <dependency>
@@ -36,4 +36,5 @@ If you want to add graphical interface (GraphiQL)[https://github.com/graphql/gra
 {% endhighlight %}
 
 Read more at [KumuluzEE GraphQL](https://github.com/kumuluz/kumuluzee-graphql) or check out sample projects at [KumuluzEE samples](https://github.com/kumuluz/kumuluzee-samples).
+
 *GraphQL definition was taken from [Wikipedia](https://en.wikipedia.org/wiki/GraphQL).*

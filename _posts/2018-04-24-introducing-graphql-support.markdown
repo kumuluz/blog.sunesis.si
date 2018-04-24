@@ -14,26 +14,26 @@ GraphQL is a data query language developed internally at Facebook in 2012 before
 KumuluzEE GraphQL enables you to easily create your GraphQL endpoint or convert an exsisting REST endpoint with the use of annotations.
 Learn more about [GraphQL](https://graphql.org/) or get started with a [basic sample](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-graphql-jpa-simple).
 
-<!-- more-->
+<!--more-->
 
 You can enable the KumuluzEE GraphQL support by adding the following dependency:
-+{% highlight xml %}
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee.graphql</groupId>
     <artifactId>kumuluzee-graphql</artifactId>
     <version>${kumuluzee-graphql.version}</version>
 </dependency>
-+{% endhighlight %}
+{% endhighlight %}
 
 If you want to add graphical interface (GraphiQL)[https://github.com/graphql/graphiql], you can include the following dependency:
 
-+{% highlight xml %}
+{% highlight xml %}
 <dependency>
     <groupId>com.kumuluz.ee.graphql</groupId>
     <artifactId>kumuluzee-graphql-ui</artifactId>
     <version>${kumuluzee-graphql.version}</version>
 </dependency>
-+{% endhighlight %}
+{% endhighlight %}
 
 Read more at [KumuluzEE GraphQL](https://github.com/kumuluz/kumuluzee-graphql) or check out sample projects at [KumuluzEE samples](https://github.com/kumuluz/kumuluzee-samples).
 *GraphQL definition was taken from [Wikipedia](https://en.wikipedia.org/wiki/GraphQL).*

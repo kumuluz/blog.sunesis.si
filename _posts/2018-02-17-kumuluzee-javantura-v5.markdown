@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE @Javantura v5 in Zagreb"
 date:   2018-02-17
 author: zvoneg
-categories: [KumuluzEE]
+categories: [Product]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

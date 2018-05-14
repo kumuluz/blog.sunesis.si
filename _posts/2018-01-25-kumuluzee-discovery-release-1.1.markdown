@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Discovery 1.1 released"
 date:   2018-01-25
 author: urbim
-categories: [KumuluzEE, Discovery]
+categories: [Product, Announcement]
 tags: [KumuluzEE Discovery, etcd, Consul]
 ---
 

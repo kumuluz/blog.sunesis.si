@@ -1,0 +1,56 @@
+<div id="blog">
+        <div id="posts">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-8">
+                {% assign posts = site.posts %}
+                {% if include.category %}
+                {% assign posts = site.categories[include.category] %}
+                {% endif %}
+
+                {% for post in posts %} {% assign author = site.data.authors[post.author] %} {% assign author2 = site.data.authors[post.author2]
+                %}
+      
+                <article class="post">
+                  <div class="author">     
+                    <span class="date">{{ post.date | date: "%B %-d, %Y" }}</span>
+                    {% if post.categories %}
+                    <span class="categories">
+                      {% for category in post.categories %}
+                      <a href="/category/{{category | downcase }}.html">{{ category }}</a>
+                      {% endfor %}
+                    </span>
+                    {% endif %}
+                    <span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
+                  </div>
+
+                  <h2 class="title">
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h2>
+
+                  {% if post.image %}
+                  <div class="cover" style="background-image: url('{{ post.image }}')"></div>
+                  {% endif %}
+
+                  <div class="intro">
+                    {{ post.excerpt }}
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-sm-6 mb-3 mb-sm-0 text-center continue-reading">
+                      <a class="btn btn-primary px-3" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+                    </div>
+                    <div class="col-12 col-sm-6 share-post">
+                      {% include share-page.html page=post %}
+                    </div>
+                  </div>
+                </article>
+                {% endfor %}
+              </div>
+              <div class="col-12 col-lg-4 sidebar">
+                {% include side-bar.html %}
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

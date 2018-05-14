@@ -6,52 +6,132 @@ layout: default
 
 <div id="blogpost">
 	<div id="blogpost-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-10 post">
-					<div class="title">
-						{{ page.title }}
-					</div>
-					<div class="author">
-						<img src="//www.gravatar.com/avatar/{{ author.gravatar }}" class="avatar" alt="author" />
-						By {{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}, {{ page.date | date: "%b %-d, %Y" }}
+		<div class="container d-flex">
+			<div class="col-12 col-lg-8">
+					<div class="post">
+						<div class="author">
+							<span class="date">{{ page.date | date: "%B %-d, %Y" }}</span>
 
-						{% if page.categories %}
-							<span class="categories">
-								<i class="fa fa-folder"></i>
-								{% for category in page.categories %}
-									{{ category | capitalize }}
+							{% if page.categories %}
+								<span class="categories">
+									{% for category in page.categories %}
+										<a href='#'>{{ category | capitalize }}</a>
+									{% endfor %}
+								</span>
+							{% endif %}
+							<span class="author-name">{{ author.name }}{% if author2 %} and {{ author2.name }} {% endif %}</span>
+
+							<div class="tags pb-3">
+								{% for tag in page.tags %}
+									<span class="badge badge-pill badge-primary">{{ tag }}</span>
 								{% endfor %}
-							</span>
-						{% endif %}
+							</div>
+						</div>
+						
+						<h2 class="title">
+							{{ page.title }}
+						</h2>
+						<img class="img-fluid mb-5" src="{{ page.image }}" />
+						<article class="content">
+							{{ content }}
+						</article>
 					</div>
-					<article class="content">
-						{{ content }}
-
-						{% for tag in page.tags %}
-							<span class="label label-primary">{{ tag }}</span>
-						{% endfor %}
-					</article>
-
-					<hr />
-
-					<div class="share-page">
-						{% include share-page.html page=page %}
+					<div class="post-author p-3">
+						<div class="d-sm-flex align-items-center">
+							<div class="pr-5 text-center">
+								{% if author.gravatar %}
+								<img src="//www.gravatar.com/avatar/{{ author.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
+								{% else %}
+								<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
+								{% endif %}
+							</div>
+							<div>
+								<h5>{{author.name}}</h5>
+								{% if author.about %}
+								<p class="my-3">{{author.about}}</p>
+								{% endif %}
+							</div>
+						</div>
+						{% if author2 %}
+						<div class="d-sm-flex align-items-center pt-3">
+							<div class="pr-5 text-center">
+								{% if author2.gravatar %}
+								<img src="//www.gravatar.com/avatar/{{ author2.gravatar }}?s=512&d={{"/assets/images/user.svg " | absolute_url }}" class="img-fluid" alt="author" />
+								{% else %}
+								<img src="{{"/assets/images/user.svg " | relative_url }}" class="img-fluid" alt="author" />
+								{% endif %}	
+							</div>
+							<div>
+								<h5>and {{author2.name}}</h5>
+								{% if author2.about %}
+								<p class="my-3">{{author2.about}}</p>
+								{% endif %}
+							</div>
+						</div>
+						{% endif %}
 					</div>
 
 					<div class="other-posts">
-						{% if page.previous.url %} 
-							<a href="{{ page.previous.url | prepend: site.baseurl }}" class="prev">
-								← {{page.previous.title}}
+						<h5>RELATED ARTICLES</h5>
+						<div class="d-flex justify-content-between mb-3 mb-5">
+							{% if page.previous.url %}
+							<a href="{{ page.previous.url | prepend: site.baseurl }}" class="prev d-flex align-items-center">
+								<i class="fa fa-chevron-left"></i>
+								<div>
+									{% if page.previous.categories %}
+									<div class="categories">
+										{% for category in page.previous.categories %}
+										<span>{{ category | capitalize }}</span>
+										{% endfor %}
+									</div>
+									{% endif %}
+									<h4>
+										{{page.previous.title}}
+									</h4>
+								</div>
+							</a>						
+							{% endif %}
+							{% if page.next.url %}
+							<a href="{{ page.next.url | prepend: site.baseurl }}" class="next d-flex align-items-center">
+								<div>
+									{% if page.next.categories %}
+									<div class="categories">
+										{% for category in page.next.categories %}
+										<span>{{ category | capitalize }}</span>
+										{% endfor %}
+									</div>
+									{% endif %}
+									<h4>
+										{{page.next.title}}
+									</h4>
+								</div>
+								<i class="fa fa-chevron-right"></i>
 							</a>
-						{% endif %}
-						{% if page.next.url %} 
-							<a href="{{ page.next.url | prepend: site.baseurl }}" class="next pull-right">
-								{{page.next.title}} →
-							</a>
-						{% endif %}
-					</div>					
-				</div>
+							{% endif %}
+						</div>
+					</div>	
+
+					<div class="share-page">
+						<h4 class="mb-3">Share page or discuss:</h4>
+						{% include share-page.html page=page %}
+					</div>
+
+					<!--					
+					<div id="disqus_thread" class="mb-5"></div>
+					<script>
+					(function() {
+					var d = document, s = d.createElement('script');
+					s.src = 'https://test-kumuluz-blog.disqus.com/embed.js';
+					s.setAttribute('data-timestamp', +new Date());
+					(d.head || d.body).appendChild(s);
+					})();
+					</script>
+					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>			
+					-->
+
+			</div>
+			<div class="col-12 col-lg-4 sidebar">
+				{% include side-bar.html %}
 			</div>
 		</div>
 	</div>

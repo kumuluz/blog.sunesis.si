@@ -1,17 +1,34 @@
-/* roboto font */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,500,500italic,700,700italic,900,900italic);
-/* source sans pro */
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-/* lato */
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic);
-/* merriweather */
-@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300italic,300,400italic,700,700italic);
+$blue-100: #98cdff;
+$blue-300: #1d8ceb;
+$blue-400: #155bfb;
+$blue-700: #24368a;
+$blue-900: #24368a;
+$blue-1000: #1f2b66;
 
-$roboto: "Roboto";
-$lato: 'Lato', 'Helvetica Neue', Arial;
-$helvetica: "Helvetica Neue", Helvetica, Arial;
-$myriad: Myriad Pro, Lato, Helvetica Neue, Arial;
-$sourceSans: Source Sans Pro, Helvetica Neue, Arial;
-$merriweather: "Merriweather", Georgia;
+$grey-100: #e0e0e0;
+$grey-200: #cfcfcf;
+$grey-300: #bdbdbd;
+$grey-500: #485371;
 
-$spacing-unit: 30px;
+$white: #fff;
+$black: #000;
+
+$shadow-color: rgba(36, 54, 138, 0.2);
+$box-shadow: 0px 7px 20px $shadow-color;
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=latin-ext');
+$open-sans: 'Open Sans', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&subset=latin-ext');
+$fjalla-one: 'Fjalla One', sans-serif;
+
+$linkedin: #1b9dff;
+
+// Bootstrap
+$primary: $blue-400;
+$secondary: $white;
+$info: $grey-300;
+$enable-rounded: false;
+$font-family-sans-serif: $open-sans;
+$border-width: 2px;
+$input-placeholder-color: $grey-200;

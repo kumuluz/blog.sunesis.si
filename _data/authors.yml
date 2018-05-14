@@ -1,9 +1,17 @@
+#username:
+#    name: John Doe
+#    gravatar: 8ecad199678ca92808a079031e45d4d1
+#    email: john.doe@cloud.si
+#    github: john.doe
+#    about: About John doe
+
 tfaga:
     name: Tilen Faganel
     gravatar: 3d707dfe5cda586bb8dd67a6d2bec79d
     email: tilen.faganel@me.com
     github: TFaga
     twitter: TilenFaganel
+    about: Expert for software development, microservices, APIs, cloud and marketplace development. Lead developer of KumuluzEE. Won Java Duke’s Choice Award for innovation.
 zvoneg:
     name: Zvone Gazvoda
     email: zvone.gazvoda@cloud.si
@@ -18,10 +26,12 @@ matjazbj:
     gravatar: ef0e7beae6a5fdc31232e2b52b0054c3
     email: matjaz.juric@cloud.si
     github: MBJuric
+    about: Professor at UL, Java Champion, IBM Champion and Oracle ACE Director. Project lead for several industry, research and EU projects utilizing cloud, APIs, microservices, blockchain and smart contracts.
 ezupancic:
     name: Eva Zupancic
     email: eva.zupancic@sunesis.si
     github: ezupancic
+    about: PhD in Computer Science, 10 years of experience in software engineering, security, privacy and trust management. CEO of successful IT start-up company.
 lukas:
     name: Luka Šarc
     gravatar: 66fab2e78f40781474e8c83a06184a20

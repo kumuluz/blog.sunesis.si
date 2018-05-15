@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Config extension"
 date:   2017-09-09
 author: jmezna
-categories: [KumuluzEE, Config]
+categories: [Product, Developers]
 tags: [KumuluzEE Config, etcd, Consul]
 ---
 

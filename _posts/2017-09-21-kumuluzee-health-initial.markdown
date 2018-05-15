@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Health extension"
 date:   2017-09-21
 author: skrjanec
-categories: [KumuluzEE, Health]
+categories: [Product, Developers]
 tags: [KumuluzEE Health, Microprofile-Health]
 ---
 

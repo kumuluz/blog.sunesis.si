@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE REST extension"
 date:   2017-09-09
 author: jmezna
-categories: [KumuluzEE, REST]
+categories: [Product, Developers]
 tags: [KumuluzEE REST, REST API, REST patterns]
 ---
 

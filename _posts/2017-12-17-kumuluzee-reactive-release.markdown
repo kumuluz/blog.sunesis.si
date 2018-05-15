@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Reactive extension"
 date:   2017-12-17
 author: zanozbot
-categories: [KumuluzEE, Reactive]
+categories: [Product, Developers]
 tags: [KumuluzEE Reactive, Vert.x]
 ---
 

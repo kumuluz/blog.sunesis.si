@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Fault Tolerance extension"
 date:   2017-09-03
 author: lukas
-categories: [KumuluzEE, Fault Tolerance]
+categories: [Product, Developers]
 tags: [KumuluzEE Fault Tolerance, Circuit Breaker, Retry, Bulkhead, Timeout, Fallback, Microprofile Fault Tolerance]
 ---
 

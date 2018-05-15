@@ -3,7 +3,7 @@ layout: post
 title:  "Using KumuluzEE CORS"
 date:   2017-09-26
 author: zvoneg
-categories: [KumuluzEE, CORS]
+categories: [Product, Developers]
 tags: [KumuluzEE CORS, Cross-Origin]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "Eclipse MicroProfile 1.2 with KumuluzEE"
 date:   2017-11-09
 author: jmezna
-categories: [KumuluzEE, Architecture]
+categories: [Product, Developers]
 tags: [KumuluzEE, Java EE, Microservices, Cloud-native, Eclipse MicroProfile]
 image: https://images.unsplash.com/photo-1514207147125-8e6c07bbe5ad?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bbdce3ba9f72095ab0bae8e386bead9e&auto=format&fit=crop&w=2102&q=80
 ---

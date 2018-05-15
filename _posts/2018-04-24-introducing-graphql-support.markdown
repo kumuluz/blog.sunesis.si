@@ -3,7 +3,7 @@ layout: post
 title:  "Introducing KumuluzEE GraphQL extension (1.0.0-SNAPSHOT)"
 date:   2018-04-24
 author: evader1337
-categories: [KumuluzEE, GraphQL]
+categories: [Product, Developers]
 tags: [KumuluzEE GraphQL, Java EE, Microservices]
 ---
 

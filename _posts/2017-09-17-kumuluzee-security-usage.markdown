@@ -3,7 +3,7 @@ layout: post
 title:  "Using KumuluzEE Security"
 date:   2017-09-17
 author: benjamink
-categories: [KumuluzEE, Security]
+categories: [Product, Developers]
 tags: [KumuluzEE Security, OAuth 2.0, OpenID]
 ---
 

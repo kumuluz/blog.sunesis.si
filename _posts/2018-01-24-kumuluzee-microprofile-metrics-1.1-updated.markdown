@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE MicroProfile Metrics now implements MicroProfile Metrics 1.1"
 date:   2018-01-24
 author: urbim
-categories: [KumuluzEE, Metrics]
+categories: [Product, Developers]
 tags: [KumuluzEE MicroProfile Metrics, metrics, MicroProfile, Eclipse MicroProfile]
 ---
 

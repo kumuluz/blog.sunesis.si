@@ -3,7 +3,7 @@ layout: post
 title:  "Tutorial: Cloud-native Java EE Microservices with KumuluzEE"
 date:   2017-09-28
 author: jmezna
-categories: [KumuluzEE, Architecture]
+categories: [Product, Developers]
 tags: [KumuluzEE, Java EE, Microservices, Cloud-native, Tutorial]
 ---
 

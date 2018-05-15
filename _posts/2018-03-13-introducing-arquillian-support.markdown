@@ -3,7 +3,7 @@ layout: post
 title:  "Introducing Arquillian Support"
 date:   2018-03-13
 author: urbim
-categories: [KumuluzEE, Testing, Arquillian]
+categories: [Product, Developers, Announcement]
 tags: [KumuluzEE Testing, Arquillian, Integration Testing]
 ---
 

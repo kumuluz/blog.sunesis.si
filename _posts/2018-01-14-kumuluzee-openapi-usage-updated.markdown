@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE OpenAPI in action - Updated"
 date:   2018-01-14
 author: zvoneg
-categories: [KumuluzEE, OpenAPI]
+categories: [Product, Developers]
 tags: [KumuluzEE OpenAPI, Swagger-UI]
 ---
 

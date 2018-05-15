@@ -3,7 +3,7 @@ layout: post
 title:  "Etcd health check"
 date:   2017-12-13
 author: skrjanec
-categories: [KumuluzEE, Health]
+categories: [Product, Developers]
 tags: [KumuluzEE Health, Microprofile-Health, Etcd health check]
 ---
 

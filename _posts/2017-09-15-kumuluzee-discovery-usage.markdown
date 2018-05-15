@@ -3,7 +3,7 @@ layout: post
 title:  "Using KumuluzEE Discovery"
 date:   2017-09-15
 author: urbim
-categories: [KumuluzEE, Discovery]
+categories: [Product, Developers]
 tags: [KumuluzEE Discovery, etcd, Consul]
 ---
 

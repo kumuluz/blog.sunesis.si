@@ -3,7 +3,7 @@ layout: post
 title:  "Running KumuluzEE microservices on Kubernetes (Part 1)"
 date:   2017-12-03
 author: zvoneg
-categories: [KumuluzEE, Kubernetes]
+categories: [Product, Developers]
 tags: [KumuluzEE, KumuluzEE Discovery, KumuluzEE Config, Kubernetes]
 ---
 

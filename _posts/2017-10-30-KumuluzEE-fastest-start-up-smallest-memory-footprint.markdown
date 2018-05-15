@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE has the fastest start-up and smallest memory footprint"
 date:   2017-10-29
 author: ezupancic
-categories: [KumuluzEE]
+categories: [Product]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

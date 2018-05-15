@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Swagger 1.0.0 release is here!"
 date:   2018-03-18
 author: zvoneg
-categories: [KumuluzEE Swagger]
+categories: [Product, Developers, Announcement]
 tags: [KumuluzEE Swagger, Java EE, Microservices]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Security extension"
 date:   2017-09-12
 author: benjamink
-categories: [KumuluzEE, Security]
+categories: [Product, Developers]
 tags: [KumuluzEE Security, OAuth 2.0, OpenID]
 ---
 

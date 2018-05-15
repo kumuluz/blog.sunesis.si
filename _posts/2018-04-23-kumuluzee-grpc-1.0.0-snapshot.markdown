@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE gRPC 1.0.0-SNAPSHOT released"
 date:   2018-04-23
 author: primozh
-categories: [KumuluzEE, gRPC]
+categories: [Product, Developers]
 tags: [KumuluzEE gRPC, gRPC API]
 ---
 

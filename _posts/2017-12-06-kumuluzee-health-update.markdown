@@ -3,7 +3,7 @@ layout: post
 title:  "HTTP health check"
 date:   2017-12-06
 author: skrjanec
-categories: [KumuluzEE, Health]
+categories: [Product, Developers]
 tags: [KumuluzEE Health, Microprofile-Health, HTTP health check]
 ---
 

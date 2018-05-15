@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE 2.1.0 released"
 date:   2017-03-21
 author: tfaga
-categories: [KumuluzEE]
+categories: [Product]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE MicroProfile Config now implements MicroProfile Config 1.2"
 date:   2018-01-24
 author: jmezna
-categories: [KumuluzEE, Config]
+categories: [Product, Developers]
 tags: [KumuluzEE MicroProfile Config, configuration, MicroProfile, Eclipse MicroProfile]
 ---
 

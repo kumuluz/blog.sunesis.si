@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Swagger usage"
 date:   2017-10-25
 author: zvoneg
-categories: [KumuluzEE, Swagger]
+categories: [Product, Developers]
 tags: [KumuluzEE Swagger, Swagger-UI]
 ---
 

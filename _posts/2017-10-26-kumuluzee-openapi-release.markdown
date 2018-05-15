@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE OpenAPI extension"
 date:   2017-10-26
 author: zvoneg
-categories: [KumuluzEE, OpenAPI]
+categories: [Product, Developers]
 tags: [KumuluzEE OpenAPI, Swagger-UI]
 ---
 

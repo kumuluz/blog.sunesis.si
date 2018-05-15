@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Config 1.1 released"
 date:   2018-01-19
 author: urbim
-categories: [KumuluzEE, Config]
+categories: [Product, Developers]
 tags: [KumuluzEE Config, etcd, Consul]
 ---
 

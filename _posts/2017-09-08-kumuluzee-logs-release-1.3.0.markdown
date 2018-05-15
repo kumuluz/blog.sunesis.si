@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Logs extension"
 date:   2017-09-08
 author: skrjanec
-categories: [KumuluzEE, Logs]
+categories: [Product, Developers]
 tags: [KumuluzEE Logs, Logging]
 ---
 

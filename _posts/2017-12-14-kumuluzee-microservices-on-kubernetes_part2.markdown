@@ -3,7 +3,7 @@ layout: post
 title:  "Running KumuluzEE microservices on Kubernetes (Part 2)"
 date:   2017-12-14
 author: zvoneg
-categories: [KumuluzEE, Kubernetes]
+categories: [Product, Developers]
 tags: [KumuluzEE, KumuluzEE Health, Microprofile 1.2, Kubernetes]
 ---
 

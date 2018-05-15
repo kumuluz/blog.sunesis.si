@@ -3,7 +3,7 @@ layout: post
 title:  "Eclipse Microservices and Service Discovery"
 date:   2017-09-29
 author: urbim
-categories: [KumuluzEE, Discovery]
+categories: [Product, Developers]
 tags: [Service Discovery, Eclipse, KumuluzEE]
 ---
 

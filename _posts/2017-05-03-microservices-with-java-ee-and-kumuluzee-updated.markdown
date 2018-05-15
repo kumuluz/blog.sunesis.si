@@ -4,7 +4,7 @@ title:  "Develop microservices with Java EE and KumuluzEE - updated"
 date:   2017-05-03
 author: tfaga
 author2: matjazbj
-categories: [KumuluzEE, Architecture]
+categories: [Product, Developers]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 

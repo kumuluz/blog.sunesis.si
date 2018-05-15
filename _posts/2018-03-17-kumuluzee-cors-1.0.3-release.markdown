@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE CORS 1.0.3 released"
 date:   2018-03-17
 author: zvoneg
-categories: [KumuluzEE CORS]
+categories: [Product, Developers]
 tags: [KumuluzEE CORS, Java EE, Microservices]
 ---
 

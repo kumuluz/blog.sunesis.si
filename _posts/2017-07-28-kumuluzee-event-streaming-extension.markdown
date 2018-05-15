@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE Event Streaming extension"
 date:   2017-07-28
 author: matijaklj
-categories: [KumuluzEE, Event Streaming]
+categories: [Product, Developers]
 tags: [KumuluzEE Event Streaming, Kafka ]
 ---
 

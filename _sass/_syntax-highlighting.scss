@@ -2,7 +2,7 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
+    background: #f0f4ff;
     //@extend %vertical-rhythm;
     margin-bottom: 1rem;
 
@@ -65,4 +65,8 @@
     .vg    { color: #008080 } // Name.Variable.Global
     .vi    { color: #008080 } // Name.Variable.Instance
     .il    { color: #099 } // Literal.Number.Integer.Long
+}
+
+.highlighter-rouge {
+    color: #155bfb;
 }

@@ -4,7 +4,7 @@ title:  "KumuluzAPI - API Monitoring"
 date:   2017-08-13
 author: zvoneg
 author2: matjazbj
-categories: [KumuluzAPI, API Monitoring]
+categories: [Product, Developers]
 tags: [KumuluzAPI, API Monitoring, API Management, API Gateway]
 ---
 

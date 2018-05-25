@@ -2,7 +2,7 @@
 layout: post
 title:  "KumuluzEE adds the Apache CXF JAX-WS implementation"
 date:   2018-05-25
-author: gpor89
+author: gregorp
 categories: [Product, Developers]
 tags: [KumuluzEE, Java EE, JAX-WS, Microservices]
 ---

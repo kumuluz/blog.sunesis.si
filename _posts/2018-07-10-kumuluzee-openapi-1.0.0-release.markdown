@@ -15,4 +15,3 @@ The extension will automatically hook-up servlet that will serve your API specif
 The extension supports JDK9+.
 
 Read more at [KumuluzEE OpenAPI](https://github.com/kumuluz/kumuluzee-openapi)
-

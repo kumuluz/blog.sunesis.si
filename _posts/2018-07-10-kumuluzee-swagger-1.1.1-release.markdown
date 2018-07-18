@@ -15,4 +15,3 @@ KumuluzEE Swagger v1.1.1 brings the following updates:
 * Changes to the extension configuration.
 
 Read more at [KumuluzEE Swagger](https://github.com/kumuluz/kumuluzee-swagger)
-

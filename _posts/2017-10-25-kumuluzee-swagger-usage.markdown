@@ -7,7 +7,7 @@ categories: [Product, Developers]
 tags: [KumuluzEE Swagger, Swagger-UI]
 ---
 
-**KumuluzEE Swagger was recently updated!** with separate dependency for the Swagger UI. Check [KumuluzEE Swagger - Updated](https://blog.kumuluz.com/kumuluzee/swagger/2018/01/14/kumuluzee-swagger-usage-updated)
+**KumuluzEE Swagger was recently updated!** with separate dependency for the Swagger UI. Check [KumuluzEE Swagger - Updated](https://blog.kumuluz.com/product/developers/2018/01/14/kumuluzee-swagger-usage-updated)
 
 
 KumuluzEE Swagger (OpenAPI 2.0) extension provides support for documenting APIs using Swagger/OpenAPI v2 compliant annotations. Extension automatically hooks-up servlet that 

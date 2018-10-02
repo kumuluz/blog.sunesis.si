@@ -17,11 +17,11 @@ New release of KumuluzEE Swagger has arrived. With version 1.2.0 we are bringing
 
 - Added support for hostname and base path overriding by setting kumuluzee.swagger.base-url.
 
+<!--more-->
+
 **Bugs**:
 
 - Fixed problem with @SwaggerDefinition annotation. Annotation can now be placed to the application or any resource class.
-
-<!--more-->
 
 Read more at [KumuluzEE Swagger v1.2.0](https://github.com/kumuluz/kumuluzee-swagger/releases/tag/v1.2.0)
 

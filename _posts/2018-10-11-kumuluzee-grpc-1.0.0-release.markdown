@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "KumuluzEE-gRPC extension v1 released!"
-date:   2018-10-03
+date:   2018-10-11
 author: primozh
 categories: [Product, Announcement, Developers]
 tags: [KumuluzEE, Java EE, Microservices, gRPC]

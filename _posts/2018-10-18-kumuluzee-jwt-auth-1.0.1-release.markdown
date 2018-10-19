@@ -3,7 +3,7 @@ layout: post
 title:  "KumuluzEE JWT Auth 1.0.1 released"
 date:   2018-10-18
 author: benjamink
-categories: [Product, Developers]
+categories: [Product, Announcement, Developers]
 tags: [KumuluzEE JWT Auth, JWT, OpenID Connect, OIDC]
 ---
 

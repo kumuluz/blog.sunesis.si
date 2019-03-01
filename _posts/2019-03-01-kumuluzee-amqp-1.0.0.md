@@ -18,15 +18,15 @@ kumuluzee:
 
 - producing messages:
 ```java
-@AMQPProducer(host=”MQtest”, key=”testQueue”)
+@AMQPProducer(host="MQtest", key="testQueue")
 public String sendMessage(){
-	return “I’m a message”;
+	return "I'm a message";
 }
 ```
 
 - consuming messages:
 ```java
-@AMQPConsumer(host=”MQtest”, key=”testQueue”)
+@AMQPConsumer(host="MQtest", key="testQueue")
 public void receiveMessage(String consumerMessage){
 	System.out.println(consumerMessage);
 }

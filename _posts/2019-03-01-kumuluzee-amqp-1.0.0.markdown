@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "First version of the KumuluzEE AMQP project published"
-date:   2019-02-28
+date:   2019-03-01
 author: blazm
 categories: [Product, Announcement, Developers]
 tags: [KumuluzEE, Java EE, Microservices, Projects]

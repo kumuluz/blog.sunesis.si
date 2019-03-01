@@ -11,6 +11,8 @@ We are pleased to announce the first version of the KumuluzEE AMQP project. This
 
 KumuluzEE AMQP supports sending and receiving messages with a few simple annotations. Broker configuration can be defined with the configuration framework, which makes it fairly simple.
 
+<!--more-->
+
 A few quick examples: 
 
 - configuration:

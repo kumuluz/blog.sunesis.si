@@ -16,6 +16,7 @@ KumuluzEE AMQP supports sending and receiving messages with a few simple annotat
 A few quick examples: 
 
 - configuration:
+
 ```yaml
 kumuluzee:
   amqp:
@@ -28,6 +29,7 @@ kumuluzee:
 ```
 
 - producing messages:
+
 ```java
 @AMQPProducer(host="MQtest", key="testQueue")
 public String sendMessage(){
@@ -36,6 +38,7 @@ public String sendMessage(){
 ```
 
 - consuming messages:
+
 ```java
 @AMQPConsumer(host="MQtest", key="testQueue")
 public void receiveMessage(String consumerMessage){

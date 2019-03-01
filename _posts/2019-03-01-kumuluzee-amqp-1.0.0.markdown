@@ -47,5 +47,5 @@ public void receiveMessage(String consumerMessage){
 ```
 
 A sample is available on GitHub: [KumuluzEE AMQP sample with RabbitMQ](https://github.com/kumuluz/kumuluzee-samples/tree/master/kumuluzee-amqp-rabbitmq).
-More details about the project can be found on [the project home page](https://github.com/kumuluz/kumuluzee-amqp)
+More details about the project can be found on [the project home page](https://github.com/kumuluz/kumuluzee-amqp).
 

@@ -1,3 +1,12 @@
+---
+layout: post
+title:  "KumuluzEE AMQP 1.0.0 released"
+date:   2019-03-01
+author: blazm
+categories: [Product, Announcement, Developers]
+tags: [KumuluzEE, Java EE, Microservices]
+---
+
 We are pleased to announce the first version of the KumuluzEE AMQP project. This version provides support for the RabbitMQ message broker.
 
 KumuluzEE AMQP supports sending and receiving messages with a few simple annotations. Broker configuration can be defined with the configuration framework, which makes it fairly simple.

@@ -28,4 +28,3 @@ We are fully devoted to the development of Kumuluz and in this year we will focu
 What we are most proud of, is the fact that Kumuluz platform has been in production use by several companies – our partners that have had early trust in our project and have shown how good and efficient the Kumuluz platform is for real-world production grade projects, for which we express sincere gratitude, because we know that the best way to measure our success is to measure it by the success of our partners who use our platform. To see who has trusted us, visit [kumuluz.com](https://kumuluz.com/).
 
 Thanks for reading and continue to follow our [blog.kumuluz.com](https://blog.kumuluz.com/). 
-

@@ -3,7 +3,7 @@ layout: post
 title:  "Kumuluz is celebrating 5 years! What we’ve done and the roadmap ahead"
 date:   2019-03-10
 author: matjazbj
-categories: [Announcement, Community, News, Product, Developers]
+categories: [Announcement, Community, News, Product]
 tags: [Kumuluz, KumuluzEE, Digital, Kumuluz.io]
 ---
 

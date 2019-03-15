@@ -14,6 +14,8 @@ KumuluzEE Rest Client 1.2.1 implements the MicroProfile Rest Client 1.2 specific
 Headers can now be generated using the `@ClientHeaderParam` annotation. Headers can be statically defined or dynamically
 generated with a method reference. For example:
 
+<!--more-->
+
 ```java
 @Path("/somePath")
 public interface MyClient {

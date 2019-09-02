@@ -2,7 +2,7 @@
 ---
 layout: post
 title:  "KumuluzEE Feature Flags 1.0.0 released"
-date:   2019-08-23
+date:   2019-09-02
 author: blazm
 categories: [Product, Announcement, Developers]
 tags: [KumuluzEE, Java EE, Microservices]

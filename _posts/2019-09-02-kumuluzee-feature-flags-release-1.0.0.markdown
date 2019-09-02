@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KumuluzEE Feature Flags 1.0.0 released"
+title:  "First version of the KumuluzEE Feature Flags project published"
 date:   2019-09-02
 author: blazm
 categories: [Product, Announcement, Developers]

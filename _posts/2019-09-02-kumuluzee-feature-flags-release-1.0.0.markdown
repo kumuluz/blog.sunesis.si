@@ -14,6 +14,7 @@ KumuluzEE Feature Flags supports feature flags with a few simple methods. Unleas
 A quick example: 
 
 - configuration:
+
 ```yaml
 kumuluzee:
   name: "Sample App"
@@ -22,7 +23,8 @@ kumuluzee:
       unleash-api: "http://localhost:4242/api"
 ```
 
-- checking a flag
+- checking a flag:
+
 ```java
 @Inject
 private FeatureFlags featureFlags;

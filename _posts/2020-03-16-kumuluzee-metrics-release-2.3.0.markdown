@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "KumuluzEE Metrics 2.3.0 released"
-date:   2030-03-16
+date:   2020-03-16
 author: jmezna
 categories: [Product, Developers]
 tags: [KumuluzEE Metrics, Metrics, MicroProfile, Eclipse MicroProfile]

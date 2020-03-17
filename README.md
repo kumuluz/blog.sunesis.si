@@ -16,3 +16,4 @@ sample:
 
 ## Post categories
 Avaliable categories: `Announcement`, `Community`, `Developers`, `News`, `Product`
+

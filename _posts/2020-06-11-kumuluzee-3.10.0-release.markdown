@@ -7,7 +7,7 @@ categories: [Product, Announcement, Developers]
 tags: [KumuluzEE, Java EE, Microservices]
 ---
 
-We are announcing new releases of the KumuluzEE family. The new release of the core microservice framework KumuluzEE 3.10.0 brings support for Java 14 and a set of new features and enhancements. Supporting projects, including Config, Security, Rest Client, CORS, REST and JWT Auth, have also been updated.
+We are announcing new releases in the KumuluzEE family. The new release of the core microservice framework KumuluzEE 3.10.0 brings support for Java 14 and a set of new features and enhancements. Supporting projects, including Config, Security, Rest Client, CORS, REST and JWT Auth, have also been updated.
 
 <!--more-->
 

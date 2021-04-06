@@ -1,4 +1,4 @@
-# blog.kumuluz.com
+# blog.sunesis.si
 
 ## Author info
 
@@ -15,5 +15,5 @@ sample:
 ```
 
 ## Post categories
-Avaliable categories: `Announcement`, `Community`, `Developers`, `News`, `Product`
+Avaliable categories: `Napoved`, `Skupnost`, `Razvijalci`, `Novice`, `Produkt`
 

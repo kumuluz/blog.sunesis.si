@@ -111,7 +111,7 @@ in da je naš glavni fokus na ustvarjanje novih ekosistemov preko katerih širim
 
 Prikaz celotnega ekosistema orodij, ki ga potrebujemo, da uspešno delujemo v API ekonomiji:
 
-![Ekosistem ordij za uspešno delovanje API ekonomije]({{ site.baseurl }}/assets/images/posts/kumuluzapi-api-economy/kumuluzapi-economy.pdf)
+![Ekosistem ordij za uspešno delovanje API ekonomije]({{ site.baseurl }}/assets/images/posts/kumuluzapi-api-economy/kumuluzapi-economy.png)
 
 <u>KumuluzAPI</u> je eno takšnih orodij, ki vam omogoča celostno upravljanje z API-ji. Če vas zanima več informacij, 
 kako lahko vaše podjetje izkoristi API ekonomijo za hitrejšo rast (skupaj z vami vam pomagamo identificirati potencialne 

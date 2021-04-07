@@ -1,6 +1,6 @@
 # blog.sunesis.si
 
-## Author info
+## Informacije o avtorju
 
 Informacije o avtorjih uredite v _data/authors.yml  
 Primer avtorja:

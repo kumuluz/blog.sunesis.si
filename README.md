@@ -2,8 +2,8 @@
 
 ## Author info
 
-Edit author info at _data/authors.yml  
-Example author:
+Informacije o avtorjih uredite v _data/authors.yml  
+Primer avtorja:
 ```
 sample:
     name: Sample Author
@@ -14,6 +14,6 @@ sample:
     about: Nobel Prize winning author
 ```
 
-## Post categories
-Avaliable categories: `Napoved`, `Skupnost`, `Razvijalci`, `Novice`, `Produkt`
+## Kategorije objav
+Možne kategorije: `Napoved`, `Skupnost`, `Razvijalci`, `Novice`, `Produkt`
 

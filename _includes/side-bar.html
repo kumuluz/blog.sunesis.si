@@ -1,17 +1,16 @@
 <div class="updates">
-    <h4>Blog updates </h4>
+    <h4>Posodobitve bloga </h4>
     <p>
-      Never miss an update. Subscribe to our feed or follow us on social media and get notified whenever we post something in the
-      blog.
+      Nikoli ne zamudite nove objave. Naročite se na naš vir ali nas spremljajte na družbenih omrežjih in prejemajte obvestila.
     </p>
       <a class="btn btn-primary full-width btn-sm" href="{{ " /feed.xml " | prepend: site.baseurl }}">
         <i class="fa fa-rss"></i>
-        Subscribe
+        Naročite se
       </a>
   </div>
 
   <div class="recommended mt-5">
-    <h3>Top posts</h3>
+    <h3>Top objave</h3>
     {% assign announcement = site.categories.Announcement.first %}
     {% if announcement %}
     <h6>Big announcements</h6>

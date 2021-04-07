@@ -12,6 +12,9 @@ Preprosto povedano API-ji določajo, kako naj dve aplikaciji med seboj komunicir
 sliši definicija API-ja izjemno preprosta, pa je s prihodom API-jev zaživela povsem nova ekonomija – API ekonomija, ki 
 pa postaja vse bolj kompleksna in zahtevna, a ključna za rast in razvoj skoraj vsake organizacije. 
 
+
+<!--more-->
+
 Prav API-ji so namreč tisti, ki podjetjem omogočajo, da **na povsem nov način med seboj povežejo sisteme, podatke, 
 algoritme, transakcije in nenazadnje tudi ljudi**. Še več omogočajo nastanek novih digitalnih produktov in storitev, 
 uporabniških izkušenj in nov način pridobivanja ter obdelave podatkov. API-ji torej omogočajo podjetjem, da se še bolj 

@@ -4,7 +4,7 @@ title:  "API ekonomija - Kaj je in kako vam lahko pomaga pri rasti vašega podje
 date:   2021-04-06
 author: zvoneg
 author2: matjazbj
-categories: [Produkt, Napoved, Razvijalci]
+categories: [KumuluzAPI]
 tags: [KumuluzAPI, API ekonomija, Upravljanje API-jev]
 ---
 

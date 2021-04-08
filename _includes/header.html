@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
   <div class="container">
-    <a href="{{ site.baseurl }}/" class="navbar-brand">
-      <img alt="" src="{{ " /assets/images/logo.svg " | prepend: site.baseurl }}" />
+    <a href="{{ site.home_url }}/" class="navbar-brand">
+      <img alt="" src="{{ " /assets/images/logo.svg " | prepend: site.home_url }}" />
     </a>
   </div>
 </nav>
@@ -23,19 +23,10 @@
         <a class="{% if '/' == page.url %}active{% endif %}" href="/">Vse</a>
       </li>
       <li>
-        <a class="{% if '/category/announcement.html' == page.url %}active{% endif %}" href="/category/announcement.html">Napovedi</a>
+        <a class="{% if '/category/product-ka.html' == page.url %}active{% endif %}" href="/category/product-ka.html">KumuluzAPI</a>
       </li>
       <li>
-        <a class="{% if '/category/product.html' == page.url %}active{% endif %}" href="/category/product.html">Produkt</a>
-      </li>
-      <li>
-        <a class="{% if '/category/developers.html' == page.url %}active{% endif %}" href="/category/developers.html">Za razvijalce</a>
-      </li>
-      <li>
-        <a class="{% if '/category/news.html' == page.url %}active{% endif %}" href="/category/news.html">Novice in obvestila</a>
-      </li>
-      <li>
-        <a class="{% if '/category/community.html' == page.url %}active{% endif %}" href="/category/community.html">Skupnost</a>
+        <a class="{% if '/category/product-ki.html' == page.url %}active{% endif %}" href="/category/product-ki.html">KumuluzIntegration</a>
       </li>
     </ul>
   </div>

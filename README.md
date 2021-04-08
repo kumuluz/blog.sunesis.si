@@ -15,5 +15,5 @@ sample:
 ```
 
 ## Kategorije objav
-Možne kategorije: `Napoved`, `Skupnost`, `Razvijalci`, `Novice`, `Produkt`
+Možne kategorije: `KumuluzAPI`, `KumuluzIntegration`
 

@@ -5,6 +5,7 @@ description: >
   Sunesis je slovensko podjetje, ki nudi vrsto tehnoloških rešitev kot je ogrodje za mikrostoritve KumuluzEE, rešitev za upravljanje API-je KumuluzAPI, itd.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://blog.sunesis.si" # the base hostname & protocol for your site
+home_url: "https://sunesis.si"
 facebook_username: kumuluz
 twitter_username: kumuluz
 github_username: kumuluz

@@ -15,5 +15,5 @@ sample:
 ```
 
 ## Kategorije objav
-Možne kategorije: `KumuluzAPI`, `KumuluzIntegration`
+Možne kategorije: `API`, `Integration`
 

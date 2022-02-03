@@ -110,7 +110,7 @@ uresničevanju ciljev pametnega mesta. Platforma [KumuluzCrowdsensing](https://c
 razvite napredne funkcionalnosti za zbiranje podatkov in sodobno
 komunikacijo, ki omogočajo **hiter razvoj zahtevnih aplikativnih rešitev
 pametnih mest po meri.** Če vas zanima demonstracija funkcionalnosti
-platforme KumuluzCrowdsensing, nam pišite na info@kumuluz.com in skupaj
+platforme KumuluzCrowdsensing, nam pišite na <info@kumuluz.com> in skupaj
 bomo poiskali najboljše možnosti uporabe platforme za vaše pametno
 mesto.
 

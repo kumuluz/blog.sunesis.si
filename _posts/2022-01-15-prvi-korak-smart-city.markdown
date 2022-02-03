@@ -50,7 +50,7 @@ in mobilna obvestila (push notification). Prav tako podpira pošiljanje
 sporočil na več kanalov hkrati in enostavno preklapljanje med kanali
 tekom komunikacije.
 
-![Izbira kanala za pošiljanje sporočil]({{ site.baseurl }}/assets/images/posts/prvi-korak-smart-city/kumuluzCrowdsensing-channels.png)
+![Izbira kanala za pošiljanje sporočil]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-channels.png)
 
 
 
@@ -89,7 +89,7 @@ sporočil, ko uporabnik vstopi, zapusti ali se določen čas nahaja na
 določeni lokaciji. Tako lahko z uporabnikom vzpostavimo personalizirano
 in relevantno komunikacijo.
 
-##
+
 
 Kako ustrezno izbrati parametre kam, komu, kdaj in kje poslati sporočilo
 ni lahka naloga. V veliko pomoč pri tem so statistični podatki, s

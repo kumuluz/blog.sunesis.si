@@ -64,6 +64,8 @@ integracije z internimi sistemi izdela profile uporabnikov. Natančni
 profili strank omogočajo napredno segmentacijo in s tem pošiljanje
 pravih sporočil pravim naslovnikom z uporabo pravih kanalov.
 
+![Pošiljanje obvestil izbrani skupinam.]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-segmentation.png)
+
 
 ## KDAJ?
 
@@ -77,6 +79,8 @@ izpolniti vlogo in jo oddati – ni najbolj primerno, saj ljudje o takem
 omogoča, da lahko sporočila pošljete takoj ali ob določenem času, ki ga
 predhodno nastavite.
 
+![Pošiljanje sporočil takoj ali ob nastavljenem času.]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-schedule.png)
+
 
 ## KJE?
 
@@ -89,7 +93,7 @@ sporočil, ko uporabnik vstopi, zapusti ali se določen čas nahaja na
 določeni lokaciji. Tako lahko z uporabnikom vzpostavimo personalizirano
 in relevantno komunikacijo.
 
-
+![Pošiljanje sporočil, ko uporabnik vstopi, zapusti ali se določen čas nahaja na določeni lokaciji.]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-location.png)
 
 Kako ustrezno izbrati parametre kam, komu, kdaj in kje poslati sporočilo
 ni lahka naloga. V veliko pomoč pri tem so statistični podatki, s
@@ -99,6 +103,7 @@ sporočil je bilo prebranih, kdaj, kje, katere povezave je prejemnik
 odprl, ipd. in na podlagi tega izdela profile uporabnikov in
 avtomatizira pošiljanje sporočil.
 
+![Statistični podatki za poslana sporočila.]({{site.baseurl}}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-analytics.png)
 
 Učinkovita komunikacija med deležniki pametnih mest je prvi korak k
 uresničevanju ciljev pametnega mesta. Platforma [KumuluzCrowdsensing](https://crowdsensing.kumuluz.com/) ima

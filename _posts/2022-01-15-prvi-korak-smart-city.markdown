@@ -64,7 +64,7 @@ integracije z internimi sistemi izdela profile uporabnikov. Natančni
 profili strank omogočajo napredno segmentacijo in s tem pošiljanje
 pravih sporočil pravim naslovnikom z uporabo pravih kanalov.
 
-![Pošiljanje obvestil izbrani skupinam.]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-segmentation.png)
+![Pošiljanje obvestil izbranim skupinam.]({{ site.baseurl }}/assets/images/posts-prvi-korak-smart-city/kumuluzCrowdsensing-segmentation.png)
 
 
 ## KDAJ?

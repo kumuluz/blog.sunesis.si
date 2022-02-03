@@ -1,6 +1,11 @@
---- layout: post title:  "Prvi korak k doseganju ciljev pametnega mesta"
-date:   2022-01-15 author: ezupancic categories: [API] tags:
-[Crowdsensing, KumuluzCrowdsensins, Pametna mesta] ---
+---
+layout: post
+title:  "Prvi korak k doseganju ciljev pametnega mesta"
+date:   2022-01-15
+author: ezupancic
+categories: [Crowdsensing]
+tags: [Crowdsensing, KumuluzCrowdsensing, Pametna mesta]
+---
 
 Pametno mesto je relativno nov in zelo širok pojem s številnimi
 definicijami. V grobem pomeni mesto, ki s pomočjo razvite infrastrukture

@@ -6,25 +6,25 @@
 #    about: About John doe
 
 tfaga:
-    name: Tilen Faganel
+    name: Tilen
     gravatar: 3d707dfe5cda586bb8dd67a6d2bec79d
     email: tilen.faganel@me.com
     github: TFaga
     twitter: TilenFaganel
     about: Expert for software development, microservices, APIs, cloud and marketplace development. 
 zvoneg:
-    name: Zvone Gazvoda
-    email: zvone.gazvoda@cloud.si
+    name: Zvone
+    email: info@kumuluz.com
     github: zvonegit
 benjamink:
-    name: Benjamin Kastelic
+    name: Benjamin
     gravatar: 3f54afb6baafddf1ba414237af8afa83
-    email: benjamin.kastelic@cloud.si
+    email: info@kumuluz.com
     github: osbeorn
 matjazbj:
     name: Matjaz B. Juric
     gravatar: ef0e7beae6a5fdc31232e2b52b0054c3
-    email: matjaz.juric@cloud.si
+    email: info@kumuluz.com
     github: MBJuric
     about: Java Champion, Professor, Book author, Expert, Consultant, Project lead for several industry and research projects utilizing cloud, APIs, microservices and blockchain.
 ezupancic:
@@ -33,61 +33,23 @@ ezupancic:
     github: ezupancic
     about: PhD in Computer Science, 10 years of experience in software engineering, security, privacy and trust management. CEO of successful IT start-up company.
 lukas:
-    name: Luka Šarc
+    name: Luka
     gravatar: 66fab2e78f40781474e8c83a06184a20
-    email: luka.sarc@icloud.com
+    email: info@kumuluz.com
     github: lukasarc
 urbim:
-    name: Urban Malc
-    email: urban.malc@cloud.si
+    name: Urban
+    email: info@kumuluz.com
     github: urbim
 jmezna:
-    name: Jan Meznarič
+    name: Jan 
     gravatar: b034bd319071ce601d8c334090fd13cc
-    email: jan.meznaric@cloud.si
+    email: info@kumuluz.com
     github: jmezna
-matijaklj:
-    name: Matija Kljun
-    email: matija.kljun@cloud.si
-    github: matijaklj
-skrjanec:
-    name: Marko Škrjanec
-    email: marko.skrjanec@cloud.si
-    github: skrjanec
-zanozbot:
-    name: Žan Ožbot
-    gravatar: ec9039ce88d2b788cf2d49409a2d526a
-    email: zan.ozbot@gmail.com
-    github: zanozbot
-primozh:
-    name: Primož Hrovat
-    email: primoz.hrovat@cloud.si
-    github: primozh
-domeng:
-    name: Domen Gašperlin
-    gravatar: 1c39602b20883adeb33988c7c5ffcbf3
-    email: domen.gasperlin@cloud.si
-    github: domengasperlin
-evader1337:
-    name: Domen Kajdič
-    email: domen.kajdic@cloud.si
-    github: evader1337
-gregorp:
-    name: Gregor Poročnik
-    email: gpor@icloud.com
-    github: gpor89
 mihaj:
-    name: Miha Jamšek
-    email: miha.jamsek@cloud.si
+    name: Miha J.
+    email: info@kumuluz.com
     github: Jamsek-m
-blazm:
-    name: Blaž Mrak
-    email: blaz.mrak13@gmail.com
-    github: blazmrak
-martinc:
-    name: Martin Čebular
-    email: martin.cebular@gmail.com
-    github: mc0239
 cen1:
     name: Klemen F.
     email: cen.is.imba@gmail.com

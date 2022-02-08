@@ -15,5 +15,5 @@ sample:
 ```
 
 ## Kategorije objav
-Možne kategorije: `API`, `Integration`
+Možne kategorije: `API`, `Integration`, `Crowdsensing`
 

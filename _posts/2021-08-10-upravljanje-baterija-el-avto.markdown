@@ -14,10 +14,7 @@ Električna vozila so že sedanjost in hkrati predstavljajo zeleno prihodnost. N
 
 ## Ali lahko tako rešitev razvijemo tudi drugače?
 
-Inovativen pristop k razvoju aplikacije za upravljanje življenjskega cikla polnjenja električnih vozil je zbiranje potrebnih podatkov **brez direktne integracije** z električnim vozilom in polnilnico. Platforma KumuluzCrowdsensing omogoča avtomatsko zbiranje in procesiranje podatkov iz različnih virov in različnih vrst. Relevantni podatki za potrebe upravljanja polnjenja električnih vozil predstavljajo: 
-
-
-Med izzive, s katerimi se pri tem srečujejo občine, lahko uvrstimo sledeče: 
+Inovativen pristop k razvoju aplikacije za upravljanje življenjskega cikla polnjenja električnih vozil je zbiranje potrebnih podatkov **brez direktne integracije** z električnim vozilom in polnilnico. Platforma KumuluzCrowdsensing omogoča avtomatsko zbiranje in procesiranje podatkov iz različnih virov in različnih vrst. Relevantni podatki za potrebe upravljanja polnjenja električnih vozil predstavljajo:  
 - geo-lokacijski podatki (poti, zemljevidi polnilnic), 
 - podatkov iz senzorjev mobilnega telefona (hitrost vožnje, pospeški, svetloba), 
 - zunanji podatki (vreme, stanje na cestah, čas)

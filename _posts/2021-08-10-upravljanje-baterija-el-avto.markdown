@@ -22,7 +22,7 @@ Inovativen pristop k razvoju aplikacije za upravljanje življenjskega cikla poln
 - podatki o vozilu (uradne specifikacije, zbiranje podatkov iz izkušenj). 
 
 
-![Podatki o električni polnilnici]({{site.baseurl}}/assets/images/posts-elektricna-vozila/kumuluzCrowdsensing-polnilnice2.png){width=50%}
+![Podatki o električni polnilnici]({{site.baseurl}}/assets/images/posts-elektricna-vozila/kumuluzCrowdsensing-polnilnice2.png)
 
 Na podlagi zbranih podatkov lahko z uporabo ustreznih analitičnih metod pridobimo informacije o stanju baterije, izračunamo doseg, predlagamo optimalno pot, vozniku svetujemo glede načina vožnje, vključimo smiselne postanke ob polnilnicah, itd.  
 Uporaba platforme [KumuluzCrowdsensing](https://crowdsensing.kumuluz.com/) kot back-end rešitve razvoj mobilne aplikacije za upravljanje polnjenj električnih vozil bistveno pohitri in poenostavi. Za več informacij in demonstracijo platforme nam pišite <info@kumuluz.com>. 

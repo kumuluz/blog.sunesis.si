@@ -11,9 +11,6 @@ Kratek povzetek nekaterih zanimivih izsledkov raziskav o tem, ali se uporabniki 
 
 <!--more-->
 
-![Geo-fencing]({{site.baseurl}}/assets/images/posts-uporaba-geolokacije/geofencing.png)
-
-
 -	70 % potrošnikov je pripravljenih deliti svoje podatke o lokaciji, če menijo, da v zameno dobijo nekaj vrednega, kot so kuponi ali točke zvestobe (vir: [LSA’s Local Mobile Search](http://searchengineland.com/10-practical-tips-using-geo-location-reach-target-audience-217301)).
 
 -	70 % kupcev se niti ne zaveda, da obstajajo tehnologija beacons, ki spremljajo njihovo lokacijo (vir: [StreetFight](http://streetfightmag.com/2015/12/22/10-top-location-based-marketing-campaigns-of-2015/)). Dalje, nepoznavanje tehnologij o lokacijskem zaznavanju nima vpliva pri uporabi takšnih aplikacij, saj je strankam pomembnejša dodana vrednost aplikacije (vir: [GeoMarketing](https://geomarketing.com/most-consumers-dont-know-beacons-exist-should-that-matter-to-retailers)). 

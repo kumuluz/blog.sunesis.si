@@ -3,7 +3,7 @@ layout: post
 title:  "5 spoznanj iz gradnje AI rešitev na Azure - Sunesis na NTK 2024"
 date:   2024-09-19
 author: gregorgabrovsek
-categories: []
+categories: [AI]
 tags: [umetna inteligenca, Azure, KumuluzAI, NTK2024]
 ---
 

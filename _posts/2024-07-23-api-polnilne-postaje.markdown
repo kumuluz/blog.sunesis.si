@@ -25,12 +25,14 @@ Za učinkovito upravljanje polnilnih postaj je ključnega pomena, da se podatki 
 
 
 **Optimizacija porabe energije**
+
 Polnilne postaje morajo biti sposobne učinkovito upravljati porabo energije glede na trenutne obremenitve omrežja in cene energije. S pomočjo KumuluzAPI je mogoče vzpostaviti rešitev, ki omogoča pametno prilagajanje polnjenja.
 - Dinamično prilagajanje moči polnjenja: API-ji lahko omogočajo, da polnilne postaje prilagajajo moč polnjenja glede na trenutne obremenitve omrežja, s čimer zmanjšujejo obremenitev v času konic.
 - Prilagajanje glede na cene energije: S povezovanjem z omrežnimi operaterji je mogoče optimizirati polnjenje v časih, ko so cene električne energije najnižje, kar koristi tako uporabnikom kot upravljalcem omrežja.
 - Trajnostna raba energije: Rešitve, ki temeljijo na KumuluzAPI, omogočajo boljšo izrabo razpoložljivih virov energije, s čimer prispevajo k zmanjšanju emisij in bolj trajnostnemu delovanju omrežij.
 
 **Integracija z mobilnimi aplikacijami**
+
 Danes uporabniki pričakujejo enostaven dostop do podatkov in upravljanje naprav prek mobilnih aplikacij. KumuluzAPI omogoča vzpostavitev API-jev, ki povezujejo polnilne postaje z uporabniškimi aplikacijami, kar prinaša večjo preglednost in nadzor nad polnjenjem.
 - Spremljanje polnjenja v realnem času: Uporabniki lahko preko mobilnih aplikacij spremljajo stanje polnjenja svojih vozil, prejemajo obvestila o zaključku polnjenja in dostopajo do zgodovine polnjenja.
 - Obveščanje uporabnikov: API-ji omogočajo, da aplikacije pošiljajo obvestila o zaključku polnjenja ali ko postaja postane na voljo, kar zmanjšuje nepotrebno čakanje.

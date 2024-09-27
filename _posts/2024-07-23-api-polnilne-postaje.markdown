@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "KumulzAPI za pametno upravljanje polnilnih postaj"
+title:  "KumuluzAPI za pametno upravljanje polnilnih postaj"
 date:   2024-07-23
 author: ezupancic
 categories: [API]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Možnosti uporabe KumulzAPI za rešitve v okolju pametnih mest"
+title:  "Možnosti uporabe KumuluzAPI za rešitve v okolju pametnih mest"
 date:   2023-11-22
 author: ezupancic
 categories: [API]

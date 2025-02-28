@@ -1,16 +1,14 @@
 ---
 layout: post
-title:  "Kako napovedati porabo energije za električna vozila s Kumuluz Crowdsensing?"
+title:  "Kako napovedati porabo energije za električna vozila s KumuluzCrowdsensing?"
 date:   2024-10-07
 author: ezupancic
 categories: [Crowdsensing]
 tags: [Crowdsensing, KumuluzCrowdsensing, Elektična vozila]
 ---
 
-
 Naraščajoča uporaba električnih vozil (EV) povzroča večji pritisk na energetsko omrežje. Za učinkovito upravljanje je ključno natančno napovedovanje potreb po polnjenju. Projekt [GREEN.DAT.AI](https://greendatai.eu/) razvija sistem za spremljanje in napovedovanje porabe energije EV, s čimer optimizira distribucijo energije in zmanjšuje obremenitev omrežja.
 <!--more-->
-
 
 ## Zbiranje podatkov in izzivi
 
@@ -21,6 +19,8 @@ Natančne napovedi temeljijo na podatkih, kot so prevoženi kilometri, hitrosti 
 Namesto neposredne povezave s polnilnimi postajami ali vozili projekt uporablja platformo [KumuluzCrowdsensing](https://crowdsensing.kumuluz.com/). Mobilna aplikacija zbira podatke s pomočjo senzorjev v pametnih napravah, kot so telefoni in pametne ure. Beleži premike EV, hitrosti vožnje, cestne razmere in vreme, ki vplivajo na porabo energije.
 
 Zbrani podatki se analizirajo s pomočjo umetne inteligence (AI), ki izračuna potrebe po polnjenju, predvidene lokacije polnjenja in zahtevano moč polnjenja. Ta pristop omogoča enostavno in učinkovito zbiranje podatkov ter izboljšuje natančnost napovedi.
+
+![EV Crowdensing aplikcacija]({{site.baseurl}}/assets/images/EVCrowdsensingAPP.png)
 
 ## Dostopnost in več informacij
 

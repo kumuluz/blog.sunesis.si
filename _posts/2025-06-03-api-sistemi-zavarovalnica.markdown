@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Kumuluz API kot pospeševalec digitalizacije v zavarovalništvu"
+title:  "Digitalizacija v zavarovalništvu s KumuluzAPI"
 date:   2025-06-03
 author: ezupancic
 categories: [API]
@@ -11,7 +11,7 @@ Zavarovalništvo je panoga, kjer je digitalizacija ključna za boljšo uporabni�
 
 <!--more-->
 
-Prav tukaj vstopi Kumuluz API, ki omogoča varno, enotno in pregledno upravljanje vseh teh API-jev.
+Prav tukaj vstopi KumuluzAPI, ki omogoča varno, enotno in pregledno upravljanje vseh teh API-jev.
 
 ## Izziv v zavarovalništvu
 
@@ -28,15 +28,15 @@ Vsak sistem je imel svoj API, različne formate podatkov in različne varnostne 
 ## Kako je pomagal Kumuluz API?
 **1. Enotna točka dostopa**
 
-Kumuluz API je deloval kot “API Gateway”. Vsi klici iz mobilne aplikacije in spletnega portala so šli najprej skozi Kumuluz API. Ta je poskrbel, da je bila komunikacija enotna in standardizirana, ne glede na to, kako so bili zaledni sistemi implementirani.
+KumuluzAPI je deloval kot “API Gateway”. Vsi klici iz mobilne aplikacije in spletnega portala so šli najprej skozi KumuluzAPI. Ta je poskrbel, da je bila komunikacija enotna in standardizirana, ne glede na to, kako so bili zaledni sistemi implementirani.
 
 **2. Transformacija podatkov**
 
-Ker so različni sistemi uporabljali različne formate (XML, JSON, SOAP), je Kumuluz API opravil transformacijo podatkov v enoten format. Mobilna aplikacija je tako vedno prejela čist JSON odgovor, ne glede na to, ali je bil izvor SOAP ali REST.
+Ker so različni sistemi uporabljali različne formate (XML, JSON, SOAP), je KumuluzAPI opravil transformacijo podatkov v enoten format. Mobilna aplikacija je tako vedno prejela čist JSON odgovor, ne glede na to, ali je bil izvor SOAP ali REST.
 
 **3. Varnost in dostopne pravice**
 
-Za prijavo škode je bilo treba zagotoviti varnost osebnih podatkov. Kumuluz API je vpeljal OAuth2 avtentikacijo in JWT žetone, s katerimi so bile zahteve strank varno overjene. Poleg tega je bilo mogoče določiti, kateri sistemi imajo pravico brati ali pisati določene podatke.
+Za prijavo škode je bilo treba zagotoviti varnost osebnih podatkov. KumuluzAPI je vpeljal OAuth2 avtentikacijo in JWT žetone, s katerimi so bile zahteve strank varno overjene. Poleg tega je bilo mogoče določiti, kateri sistemi imajo pravico brati ali pisati določene podatke.
 
 **4. Analitika in nadzor**
 
@@ -46,9 +46,9 @@ Platforma je omogočala vpogled v uporabo API-jev: koliko škodnih primerov je b
 
 Ko je stranka v aplikaciji prijavila prometno nesrečo, se je zgodilo naslednje:
 
-- Aplikacija je prek Kumuluz API poslala zahtevek z vsemi podatki (fotografije, opis dogodka, številka police).
+- Aplikacija je prek KumuluzAPI poslala zahtevek z vsemi podatki (fotografije, opis dogodka, številka police).
 
-- Kumuluz API je preveril veljavnost JWT žetona in avtorizacijo uporabnika.
+- KumuluzAPI je preveril veljavnost JWT žetona in avtorizacijo uporabnika.
 
 
 Zahtevek je bil razdeljen:
@@ -74,13 +74,13 @@ Uporabniška izkušnja: stranke lahko vse opravijo na enem mestu, **brez fizičn
 
 Preglednost: zavarovalnica ima jasen vpogled v uporabo API-jev in lahko hitro **ukrepa** ob napakah.
 
-Fleksibilnost: dodajanje **novih storitev** (npr. zunanjih partnerjev za oceno škode) je enostavno – prek Kumuluz API se samo objavi nov endpoint.
+Fleksibilnost: dodajanje **novih storitev** (npr. zunanjih partnerjev za oceno škode) je enostavno – prek KumuluzAPI se samo objavi nov endpoint.
 
 ## Sklep
 
-Primer kaže, kako lahko Kumuluz API v praksi deluje kot osrednji gradnik digitalne preobrazbe zavarovalništva. S tem orodjem je mogoče hitro povezati stare in nove sisteme, zagotoviti varnost ter izboljšati uporabniško izkušnjo.
+Primer kaže, kako lahko KumuluzAPI v praksi deluje kot osrednji gradnik digitalne preobrazbe zavarovalništva. S tem orodjem je mogoče hitro povezati stare in nove sisteme, zagotoviti varnost ter izboljšati uporabniško izkušnjo.
 
-Zavarovalnice, ki iščejo pot do bolj agilnega in sodobnega poslovanja, lahko s Kumuluz API hitreje uvajajo inovacije, ne da bi morale popolnoma preurediti obstoječe sisteme. Za več informacij nas kontaktirajte na <info@kumuluz.com>.
+Zavarovalnice, ki iščejo pot do bolj agilnega in sodobnega poslovanja, lahko s KumuluzAPI hitreje uvajajo inovacije, ne da bi morale popolnoma preurediti obstoječe sisteme. Za več informacij nas kontaktirajte na <info@kumuluz.com>.
 
 
 

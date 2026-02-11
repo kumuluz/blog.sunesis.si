@@ -15,11 +15,11 @@ Z veseljem naznanjamo, da smo v koraku z globalnimi tehnološkimi trendi kot eni
 
 ## Zakaj uporabiti KumuluzAPI MCP strežnik?
 
-Naš MCP strežnik agentom umetne inteligence omogoča varen in nadzorovan dostop do virov vaše organizacije. S pomočjo namenskih orodij vam lahko vaš izbrani LLM sedaj asistira tudi pri naslednjih nalogah:
+KumuluzAPI MCP strežnik agentom umetne inteligence omogoča varen in nadzorovan dostop do virov organizacije. S pomočjo namenskih orodij lahko izbrani LLM sedaj asistira tudi pri naslednjih nalogah:
 
 - **Pregled organizacijske strukture:** Hiter vpogled v vire in sredstva brez ročnega brskanja.
 
-- **Diagnostika aplikacij:** Analiza stanja in zdravja vaših mikrostoritev.
+- **Diagnostika aplikacij:** Analiza stanja in zdravja mikrostoritev.
 
 - **Analiza končnih točk:** Podroben pregled API endpointov in prehodov.
 
@@ -30,11 +30,11 @@ Naš MCP strežnik agentom umetne inteligence omogoča varen in nadzorovan dosto
 
 Postopek zagona smo poenostavili, da lahko začnete takoj. Strežnik lahko v nekaj preprostih korakih povežete s priljubljenimi orodji, kot so GitHub Copilot, Cursor ali Claude Code.
 
-1. **Konfiguracija:** Za povezavo vašega izbranega LLM orodja z našim MCP strežnikom sledite navodilom v dokumentaciji.
+1. **Konfiguracija:** Za povezavo izbranega LLM orodja z našim MCP strežnikom sledite navodilom v dokumentaciji.
 
 2. **Avtentikacija:** Sistem temelji na varnem OAuth2 standardu. Ob prvem zagonu boste strežnik avtenticirali z enakim uporabniškim imenom in geslom, kot ga uporabljate za dostop do spletne aplikacije KumuluzAPI. Varno, hitro in enostavno.
 
-3. **Uporaba:** Po uspešni prijavi bo imel izbrani LLM takojšen dostop do konteksta vaše organizacije in vam bo lahko učinkovito svetoval pri upravljanju API ekosistema.
+3. **Uporaba:** Po uspešni prijavi bo imel izbrani LLM takojšen dostop do konteksta vaše organizacije in bo lahko učinkovito svetoval pri upravljanju API ekosistema.
 
 
 ## Primer uporabe v praksi

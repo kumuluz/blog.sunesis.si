@@ -7,7 +7,7 @@ categories: [API]
 tags: [KumuluzAI, AI, umetna inteligenca]
 ---
 
-Obdobje preprostih, samostojnih klepetalnih robotov z umetno inteligenco (UI) se končuje. Za srednja in velika podjetja ni več dovolj, da od UI zahtevajo le povzetek dokumenta ali osnutek e-poštnega sporočila. Prava konkurenčna prednost se skriva v globoki integraciji UI v vaše poslovne procese. Vendar pa to zahteva temeljit premik v tem, kako gradimo sisteme UI: prehod od preprostih vmesnikov za klepet do celovitih »agentskih ogrodij« (Agent harnesses) – programske strukture in izvajalnega okolja, ki jezikovni model spremeni v funkcionalnega in dolgotrajno delujočega agenta.
+Obdobje preprostih, samostojnih klepetalnih robotov z umetno inteligenco se končuje. Za srednja in velika podjetja ni več dovolj, da od UI zahtevajo le povzetek dokumenta ali osnutek e-poštnega sporočila. Prava konkurenčna prednost se skriva v globoki integraciji UI v vaše poslovne procese. Vendar pa to zahteva temeljit premik v tem, kako gradimo sisteme UI: prehod od preprostih vmesnikov za klepet do celovitih »agentskih ogrodij« – programske strukture in izvajalnega okolja, ki jezikovni model spremeni v funkcionalnega in dolgotrajno delujočega agenta.
 
 <!--more-->
 
@@ -20,9 +20,9 @@ En sam jezikovni model, ne glede na to, kako zmogljiv je, se težko spopada s ko
 ## Večagentska rešitev
 
 V podjetju Sunesis gradimo platforme UI, ki uporabljajo večagentske arhitekture po načelu »deli in vladaj«. Namesto da bi ena sama UI poskušala narediti vse, implementiramo robustne arhitekturne vzorce, kot so:
-- **Nadzornik (Supervisor)**: Glavni agent skrbi za centraliziran nadzor in usmerja zahteve k specializiranim podagentom, ki delujejo kot orodja. To omogoča vzporedno izvajanje in ohranja glavni kontekst čist.
-- **Usmerjevalnik (Router)**: Klasificira zahteve uporabnikov in jih usmeri k najbolj usposobljenemu specialističnemu agentu.
-- **Predaje znotraj omrežja (Handoffs)**: Omogoča aktivnim agentom, da predajo nadzor in celoten kontekst pogovora drugemu strokovnemu agentu znotraj omrežja.
+- **Nadzornik**: Glavni agent skrbi za centraliziran nadzor in usmerja zahteve k specializiranim podagentom, ki delujejo kot orodja. To omogoča vzporedno izvajanje in ohranja glavni kontekst čist.
+- **Usmerjevalnik**: Klasificira zahteve uporabnikov in jih usmeri k najbolj usposobljenemu specialističnemu agentu.
+- **Predaje znotraj omrežja (t.i. handoffs)**: Omogoča aktivnim agentom, da predajo nadzor in celoten kontekst pogovora drugemu strokovnemu agentu znotraj omrežja.
 
 ## Moč »inženiringa konteksta«
 

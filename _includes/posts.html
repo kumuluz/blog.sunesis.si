@@ -29,7 +29,7 @@
                   </h2>
 
                   {% if post.image %}
-                  <div class="cover" style="background-image: url('{{ post.image }}')"></div>
+                  <img class="cover" src="{{ post.image }}" alt="" loading="lazy" />
                   {% endif %}
 
                   <div class="intro">

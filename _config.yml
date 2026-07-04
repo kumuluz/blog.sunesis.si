@@ -14,3 +14,5 @@ excerpt_separator: "<!--more-->"
 
 # Build settings
 markdown: kramdown
+include:
+  - _headers

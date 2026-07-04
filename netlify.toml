@@ -25,6 +25,6 @@
 
 [[redirects]]
   from = "/*"
-  to = "https://sunesis.si/:lang/insights"
+  to = "https://sunesis.si/en/insights"
   status = 301
   force = true
